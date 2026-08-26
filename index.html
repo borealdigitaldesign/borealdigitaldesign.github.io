@@ -1,0 +1,1894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Boreal Digital Design — beautifully designed digital invitations for every celebration.">
+<title>Boreal Digital Design</title>
+
+<link rel="icon" type="image/png"
+href="assets/logo/boreal-icon-gradient-transparent.png">
+
+<style>
+:root{
+  --navy:#10264a;
+  --ink:#18315a;
+  --muted:#66738b;
+  --line:#e8edf5;
+  --cyan:#16c6d8;
+  --purple:#8b55e8;
+  --pink:#d85bb8;
+  --soft:#f7f9fd;
+  --white:#fff;
+  --shadow:0 18px 55px rgba(16,38,74,.10);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Inter,Arial,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  line-height:1.55;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button{
+  font:inherit;
+}
+
+.container{
+  width:min(1180px,92%);
+  margin:auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+}
+
+.nav{
+  min-height:78px;
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+
+.logo img{
+  width:190px;
+  max-height:58px;
+  object-fit:contain;
+}
+
+.navlinks{
+  display:flex;
+  gap:24px;
+  align-items:center;
+  margin-left:auto;
+}
+
+.navlinks a{
+  font-size:14px;
+  font-weight:700;
+}
+
+.navlinks a:hover{
+  color:var(--purple);
+}
+
+.controls{
+  display:flex;
+  gap:7px;
+}
+
+.control-group{
+  display:flex;
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:3px;
+  background:white;
+}
+
+.control-group button{
+  border:0;
+  background:transparent;
+  padding:7px 10px;
+  border-radius:999px;
+  color:var(--muted);
+  font-weight:800;
+  font-size:12px;
+  cursor:pointer;
+}
+
+.control-group button.active{
+  background:linear-gradient(90deg,#e8fbff,#f2edff);
+  color:var(--ink);
+}
+
+.menu-btn{
+  display:none;
+  border:1px solid var(--line);
+  background:white;
+  border-radius:12px;
+  padding:9px 11px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 78% 25%,rgba(22,198,216,.16),transparent 25%),
+    radial-gradient(circle at 88% 60%,rgba(139,85,232,.14),transparent 28%),
+    linear-gradient(135deg,#fff,#f5f3ff);
+  padding:85px 0 75px;
+}
+
+.hero-grid{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:1fr .9fr;
+  gap:50px;
+  align-items:center;
+}
+
+.eyebrow{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:#7454d8;
+  font-weight:900;
+  letter-spacing:.16em;
+  font-size:12px;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+
+.eyebrow span{
+  width:28px;
+  height:2px;
+  background:linear-gradient(90deg,var(--cyan),var(--purple));
+}
+
+h1{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(52px,7vw,92px);
+  line-height:.95;
+  letter-spacing:-.045em;
+  color:var(--navy);
+}
+
+h1 em{
+  font-style:italic;
+  background:linear-gradient(90deg,#0faed0,#7b55e8,#c85dbd);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.hero-copy{
+  font-size:18px;
+  color:var(--muted);
+  max-width:620px;
+  margin:25px 0 30px;
+}
+
+.actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 21px;
+  border-radius:14px;
+  font-weight:900;
+  font-size:14px;
+  transition:.2s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.btn-primary{
+  color:white;
+  background:linear-gradient(100deg,#11bfd2,#7559e7);
+  box-shadow:0 12px 25px rgba(91,91,220,.22);
+}
+
+.btn-outline{
+  color:var(--ink);
+  background:white;
+  border:1px solid #cdd7e7;
+}
+
+.hero-visual{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.hero-visual img{
+  width:min(430px,90%);
+  max-height:560px;
+  object-fit:contain;
+  filter:drop-shadow(0 28px 35px rgba(16,38,74,.20));
+  animation:float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+  50%{
+    transform:translateY(-9px);
+  }
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section{
+  padding:88px 0;
+}
+
+.section-soft{
+  background:var(--soft);
+}
+
+.section-head{
+  text-align:center;
+  max-width:720px;
+  margin:0 auto 45px;
+}
+
+.section-kicker{
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  font-weight:900;
+  color:#7a5be3;
+  margin-bottom:9px;
+}
+
+h2{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(36px,5vw,58px);
+  line-height:1.05;
+  color:var(--navy);
+}
+
+.section-head p{
+  color:var(--muted);
+  margin-top:14px;
+  font-size:17px;
+}
+
+/* =========================
+   FEATURED
+========================= */
+
+.featured{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:65px;
+  align-items:center;
+}
+
+.featured-art{
+  display:flex;
+  justify-content:center;
+}
+
+.featured-art img{
+  width:min(430px,100%);
+  max-height:600px;
+  object-fit:contain;
+  filter:drop-shadow(0 28px 30px rgba(16,38,74,.18));
+}
+
+.badge{
+  display:inline-flex;
+  padding:7px 12px;
+  border-radius:999px;
+  background:linear-gradient(100deg,#e9fbff,#f0eaff);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:#5d4ec5;
+}
+
+.featured-copy h3{
+  font-family:Georgia,serif;
+  font-size:44px;
+  color:var(--navy);
+  margin:10px 0;
+}
+
+.featured-copy p{
+  color:var(--muted);
+  font-size:17px;
+  max-width:580px;
+  margin-bottom:22px;
+}
+
+.checks{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin:22px 0 28px;
+}
+
+.check{
+  display:flex;
+  gap:10px;
+  font-size:14px;
+  font-weight:700;
+}
+
+.check i{
+  color:#25b8a5;
+  font-style:normal;
+}
+
+/* =========================
+   EVENTS
+========================= */
+
+.event-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.event-card{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 8px 28px rgba(16,38,74,.05);
+  transition:.25s;
+}
+
+.event-card:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow);
+}
+
+.event-card img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  display:block;
+}
+
+.event-body{
+  padding:18px;
+}
+
+.event-body h3{
+  font-family:Georgia,serif;
+  font-size:25px;
+  color:var(--navy);
+}
+
+.event-body p{
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* =========================
+   PACKAGES
+========================= */
+
+.market-note{
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+  margin-bottom:28px;
+}
+
+.packages-wrap{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  align-items:start;
+}
+
+.package{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:30px 25px;
+  box-shadow:0 10px 30px rgba(16,38,74,.05);
+}
+
+.package.featured-package{
+  border:2px solid #8b66eb;
+  box-shadow:0 20px 55px rgba(111,82,219,.16);
+  transform:translateY(-8px);
+}
+
+.ribbon{
+  background:linear-gradient(90deg,#14c3d6,#8656e6);
+  color:white;
+  border-radius:999px;
+  padding:6px 10px;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  display:inline-block;
+  margin-bottom:12px;
+}
+
+.package .icon{
+  font-size:28px;
+}
+
+.package h3{
+  font-family:Georgia,serif;
+  font-size:29px;
+  color:var(--navy);
+  margin-top:8px;
+}
+
+.price{
+  font-size:38px;
+  font-weight:950;
+  color:var(--ink);
+  margin:7px 0 3px;
+}
+
+.price small{
+  font-size:13px;
+  color:var(--muted);
+}
+
+.package-tag{
+  color:#6c7890;
+  font-size:13px;
+  min-height:42px;
+}
+
+.package ul{
+  list-style:none;
+  margin:18px 0;
+}
+
+.package li{
+  font-size:13px;
+  color:#53627b;
+  padding:7px 0;
+  border-bottom:1px dashed #e9edf4;
+}
+
+.package li:before{
+  content:"✓";
+  color:#4c70dd;
+  font-weight:900;
+  margin-right:8px;
+}
+
+.details summary{
+  cursor:pointer;
+  color:#5d4ec5;
+  font-weight:900;
+  font-size:13px;
+}
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.step{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:25px;
+}
+
+.step-num{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,#dffbff,#eee6ff);
+  font-weight:950;
+  color:#574fc0;
+  margin-bottom:18px;
+}
+
+.step h3{
+  font-family:Georgia,serif;
+  font-size:24px;
+  color:var(--navy);
+}
+
+.step p{
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.about-card{
+  border-radius:28px;
+  background:linear-gradient(145deg,#f7fcff,#f5f0ff);
+  padding:38px;
+  min-height:300px;
+  display:grid;
+  place-items:center;
+}
+
+.about-card img{
+  width:170px;
+}
+
+.about-copy p{
+  color:var(--muted);
+  font-size:17px;
+  margin:17px 0;
+}
+
+.about-list{
+  display:grid;
+  gap:11px;
+}
+
+.about-list div{
+  font-weight:800;
+  font-size:14px;
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq{
+  max-width:850px;
+  margin:auto;
+}
+
+.faq details{
+  border-bottom:1px solid var(--line);
+  padding:20px 0;
+}
+
+.faq summary{
+  cursor:pointer;
+  font-weight:900;
+  color:var(--navy);
+}
+
+.faq p{
+  color:var(--muted);
+  margin-top:10px;
+  font-size:14px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+  background:linear-gradient(135deg,#10264a,#172f5d 55%,#5c46a6);
+  color:white;
+  border-radius:30px;
+  padding:55px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.contact h2{
+  color:white;
+}
+
+.contact p{
+  color:#dce5f7;
+  max-width:620px;
+  margin-top:10px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  padding:38px 0;
+  background:#0d1d38;
+  color:#b9c7df;
+}
+
+.footer-grid{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  align-items:center;
+}
+
+.footer-brand{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  color:white;
+  font-weight:900;
+}
+
+.footer-brand img{
+  width:42px;
+}
+
+.footer-links{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  font-size:13px;
+}
+
+.tiny{
+  font-size:12px;
+  margin-top:18px;
+  color:#91a3c2;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:1000px){
+
+  .navlinks{
+    display:none;
+    position:absolute;
+    top:78px;
+    left:0;
+    right:0;
+    background:white;
+    padding:20px 4%;
+    flex-direction:column;
+    align-items:flex-start;
+    border-bottom:1px solid var(--line);
+  }
+
+  .navlinks.open{
+    display:flex;
+  }
+
+  .menu-btn{
+    display:block;
+    margin-left:auto;
+  }
+
+  .hero-grid,
+  .featured,
+  .about{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    text-align:center;
+  }
+
+  .eyebrow{
+    justify-content:center;
+  }
+
+  .hero-copy{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .actions{
+    justify-content:center;
+  }
+
+  .event-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .packages-wrap{
+    grid-template-columns:1fr;
+  }
+
+  .package.featured-package{
+    transform:none;
+  }
+
+  .steps{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:620px){
+
+  .logo img{
+    width:155px;
+  }
+
+  .controls{
+    display:none;
+  }
+
+  .hero{
+    padding:60px 0 50px;
+  }
+
+  h1{
+    font-size:50px;
+  }
+
+  .hero-copy{
+    font-size:16px;
+  }
+
+  .section{
+    padding:65px 0;
+  }
+
+  .event-grid,
+  .steps{
+    grid-template-columns:1fr;
+  }
+
+  .checks{
+    grid-template-columns:1fr;
+  }
+
+  .contact{
+    padding:35px 24px;
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .contact h2{
+    font-size:38px;
+  }
+
+  .footer-grid{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<div class="container nav">
+
+<a class="logo" href="#home">
+<img src="assets/logo/boreal-full-logo-gradient-transparent.png"
+alt="Boreal Digital Design">
+</a>
+
+<button class="menu-btn" id="menuBtn">☰</button>
+
+<nav class="navlinks" id="navLinks">
+
+<a href="#events">Events</a>
+<a href="#packages">Packages</a>
+<a href="#how">How It Works</a>
+<a href="#about">About</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+<div class="controls">
+
+<div class="control-group">
+
+<button class="market active" data-market="US">
+🇺🇸 US
+</button>
+
+<button class="market" data-market="MX">
+🇲🇽 MX
+</button>
+
+</div>
+
+<div class="control-group">
+
+<button class="lang active" data-lang="en">
+EN
+</button>
+
+<button class="lang" data-lang="es">
+ES
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+
+<main id="home">
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="eyebrow">
+<span></span>
+Digital Invitations
+<span></span>
+</div>
+
+<h1>
+Beautifully <em>designed</em>
+for every celebration.
+</h1>
+
+<p class="hero-copy">
+From elegant essentials to completely custom experiences,
+we create digital invitations designed around your event,
+your style, and your vision.
+</p>
+
+<div class="actions">
+
+<a class="btn btn-primary" href="#events">
+Explore Invitations →
+</a>
+
+<a class="btn btn-outline" href="#packages">
+View Packages →
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-visual">
+
+<img
+src="assets/hero/boreal-hero-invitation.png"
+alt="Boreal digital invitation"
+>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FEATURED
+========================= -->
+
+<section class="section" id="featured">
+
+<div class="container featured">
+
+<div class="featured-art">
+
+<img
+src="assets/featured/emily-james-featured-phone.png"
+alt="Emily and James invitation"
+>
+
+</div>
+
+<div class="featured-copy">
+
+<span class="badge">
+Featured Design
+</span>
+
+<h3>
+Emily &amp; James
+</h3>
+
+<p>
+A Premium Custom wedding experience created from
+the couple's vision, with a fully personalized design
+and interactive details for their guests.
+</p>
+
+<div class="checks">
+
+<div class="check">
+<i>✓</i>
+Custom interactive experience
+</div>
+
+<div class="check">
+<i>✓</i>
+Photo gallery &amp; story
+</div>
+
+<div class="check">
+<i>✓</i>
+RSVP &amp; Google Sheets
+</div>
+
+<div class="check">
+<i>✓</i>
+Music, countdown &amp; more
+</div>
+
+</div>
+
+<a
+class="btn btn-primary"
+href="Emily-James-Premium-V2/"
+>
+View Invitation →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     EVENT CATEGORIES
+========================= -->
+
+<section class="section section-soft" id="events">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="section-kicker">
+Event Categories
+</div>
+
+<h2>
+Invitations for every celebration.
+</h2>
+
+<p>
+Whether it is a wedding, milestone, shower or
+corporate gathering, we design the invitation
+around the moment.
+</p>
+
+</div>
+
+
+<div class="event-grid">
+
+<article class="event-card">
+
+<img src="assets/events/weddings.png" alt="Weddings">
+
+<div class="event-body">
+
+<h3>
+Weddings
+</h3>
+
+<p>
+Romantic, elegant and completely yours.
+</p>
+
+</div>
+
+</article>
+
+
+<article class="event-card">
+
+<img src="assets/events/birthdays.png" alt="Birthdays">
+
+<div class="event-body">
+
+<h3>
+Birthdays &amp; Celebrations
+</h3>
+
+<p>
+Make every milestone worth sharing.
+</p>
+
+</div>
+
+</article>
+
+
+<article class="event-card">
+
+<img src="assets/events/baby-showers.png" alt="Baby Showers">
+
+<div class="event-body">
+
+<h3>
+Baby Showers
+</h3>
+
+<p>
+Sweet details for a little one on the way.
+</p>
+
+</div>
+
+</article>
+
+
+<article class="event-card">
+
+<img src="assets/events/quinceaneras.png" alt="Quinceañeras">
+
+<div class="event-body">
+
+<h3>
+Quinceañeras
+</h3>
+
+<p>
+A celebration designed around her moment.
+</p>
+
+</div>
+
+</article>
+
+
+<article class="event-card">
+
+<img src="assets/events/graduations.png" alt="Graduations">
+
+<div class="event-body">
+
+<h3>
+Graduations
+</h3>
+
+<p>
+Celebrate new beginnings in style.
+</p>
+
+</div>
+
+</article>
+
+
+<article class="event-card">
+
+<img src="assets/events/corporate-events.png" alt="Corporate Events">
+
+<div class="event-body">
+
+<h3>
+Corporate Events
+</h3>
+
+<p>
+Professional invitations that make an impression.
+</p>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PACKAGES
+========================= -->
+
+<section class="section" id="packages">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="section-kicker">
+Our Packages
+</div>
+
+<h2>
+Choose the experience that fits your event.
+</h2>
+
+<p>
+Three clear options, from a beautiful printable invitation
+to a fully custom interactive experience.
+</p>
+
+</div>
+
+
+<div class="market-note">
+🌎 Prices update automatically for your selected market.
+</div>
+
+
+<div class="packages-wrap">
+
+
+<!-- ESSENTIAL -->
+
+<article class="package">
+
+<div class="icon">
+✉️
+</div>
+
+<h3 id="pkg1Name">
+ESSENTIAL
+</h3>
+
+<div class="price" id="pkg1Price">
+$15 <small>USD</small>
+</div>
+
+<div class="package-tag" id="pkg1Tag">
+Digital Printable Invitation
+</div>
+
+<ul id="pkg1List">
+
+<li>High-resolution PNG</li>
+<li>Standard invitation size</li>
+<li>Personalized with your event details</li>
+<li>Digital delivery</li>
+<li>1 round of changes</li>
+
+</ul>
+
+<p style="font-size:13px;color:#66738b;">
+Printing is not included.
+Print at the printer of your choice.
+</p>
+
+</article>
+
+
+<!-- SIGNATURE -->
+
+<article class="package featured-package">
+
+<div class="ribbon">
+Most Popular
+</div>
+
+<div class="icon">
+💌
+</div>
+
+<h3 id="pkg2Name">
+SIGNATURE
+</h3>
+
+<div class="price" id="pkg2Price">
+$75 <small>USD</small>
+</div>
+
+<div class="package-tag" id="pkg2Tag">
+Interactive Wedding Invitation
+</div>
+
+<ul id="pkg2List">
+
+<li>Interactive wedding website</li>
+<li>Digital PDF backup</li>
+<li>Your 5 favorite photos</li>
+<li>Ceremony details + map</li>
+<li>Celebration details + map</li>
+<li>Add to calendar</li>
+<li>RSVP / Contact button</li>
+<li>Optional background music</li>
+<li>Dress code</li>
+<li>Registry / Gifts</li>
+<li>Details to keep in mind</li>
+<li>2 rounds of changes</li>
+
+</ul>
+
+</article>
+
+
+<!-- PREMIUM -->
+
+<article class="package">
+
+<div class="icon">
+👑
+</div>
+
+<h3 id="pkg3Name">
+PREMIUM CUSTOM
+</h3>
+
+<div class="price" id="pkg3Price">
+$125 <small>USD</small>
+</div>
+
+<div class="package-tag" id="pkg3Tag">
+Custom Interactive Wedding Experience
+</div>
+
+<ul id="pkg3List">
+
+<li>Custom interactive wedding website</li>
+<li>Generic digital invitation — unlimited guests</li>
+<li>Digital PDF backup</li>
+<li>10+ photos gallery</li>
+<li>Automatic music experience</li>
+<li>Countdown</li>
+<li>Our Story</li>
+<li>Wedding Party</li>
+<li>Event Timeline</li>
+<li>Accommodations / hotel suggestions</li>
+<li>Multiple RSVP options</li>
+<li>RSVP responses via Google Sheets</li>
+<li>Add to Calendar</li>
+<li>Maps / Directions</li>
+<li>Dress Code</li>
+<li>Registry / Gifts</li>
+<li>Details to Keep in Mind</li>
+<li>QR Photo Sharing</li>
+<li>25 Personalized Digital Guest Covers — PDF</li>
+<li>Fully Personalized Design</li>
+<li>2 Rounds of Changes</li>
+
+</ul>
+
+<p style="font-size:13px;color:#66738b;">
+Additional Personalized Digital Guest Covers available
+for an additional fee — custom quote based on quantity.
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     HOW IT WORKS
+========================= -->
+
+<section class="section section-soft" id="how">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="section-kicker">
+How It Works
+</div>
+
+<h2>
+Simple from idea to invitation.
+</h2>
+
+<p>
+We handle the design and digital experience
+so you can focus on celebrating.
+</p>
+
+</div>
+
+
+<div class="steps">
+
+<div class="step">
+
+<div class="step-num">
+1
+</div>
+
+<h3>
+Choose
+</h3>
+
+<p>
+Select your package and event type.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-num">
+2
+</div>
+
+<h3>
+Share
+</h3>
+
+<p>
+Send us your details, photos, text and links.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-num">
+3
+</div>
+
+<h3>
+Design
+</h3>
+
+<p>
+We create your invitation around your style.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-num">
+4
+</div>
+
+<h3>
+Celebrate
+</h3>
+
+<p>
+Share your invitation and enjoy the moment.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="section" id="about">
+
+<div class="container about">
+
+<div class="about-card">
+
+<img
+src="assets/logo/boreal-icon-gradient-transparent.png"
+alt="Boreal"
+>
+
+</div>
+
+
+<div class="about-copy">
+
+<div class="section-kicker">
+About Boreal
+</div>
+
+<h2>
+Your celebration.
+Your vision.
+Your invitation.
+</h2>
+
+<p>
+Boreal Digital Design creates digital invitations
+with a balance of beautiful design, thoughtful details
+and easy-to-share experiences.
+</p>
+
+<div class="about-list">
+
+<div>
+✨ Designed around your event
+</div>
+
+<div>
+📱 Made to look beautiful on mobile
+</div>
+
+<div>
+💌 Easy to share with your guests
+</div>
+
+<div>
+🎨 Custom when your vision calls for it
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FAQ
+========================= -->
+
+<section class="section section-soft" id="faq">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="section-kicker">
+FAQ
+</div>
+
+<h2>
+A few things to know.
+</h2>
+
+</div>
+
+
+<div class="faq">
+
+
+<details>
+
+<summary>
+How long does my invitation website stay online?
+</summary>
+
+<p>
+For Signature and Premium, the digital invitation website
+remains active through the day of your event. After the event,
+the website is taken offline to help protect your personal
+event information and privacy.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Do I receive a backup?
+</summary>
+
+<p>
+Signature and Premium include a digital PDF backup so you
+can keep a copy of your invitation for your personal records.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Is printing included?
+</summary>
+
+<p>
+No. Printing is not included in any package.
+Digital files are delivered so you can print with the
+provider of your choice.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+What counts as a round of changes?
+</summary>
+
+<p>
+One round means one consolidated list of changes submitted
+at the same time. Essential includes one round;
+Signature and Premium include two rounds.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+Can Premium Custom be designed from my own idea?
+</summary>
+
+<p>
+Yes. Premium Custom is our fully personalized option.
+You can share inspiration, a reference image, a special
+background, colors or other design ideas and we build
+the experience around your vision.
+</p>
+
+</details>
+
+
+<details>
+
+<summary>
+What information do I need to provide?
+</summary>
+
+<p>
+The client provides the event details, photos, text,
+links and other information needed for the invitation.
+Boreal is not responsible for errors caused by incorrect
+information supplied by the client.
+</p>
+
+</details>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="section" id="contact">
+
+<div class="container">
+
+<div class="contact">
+
+<div>
+
+<div class="section-kicker" style="color:#bca8ff;">
+Let's create something beautiful.
+</div>
+
+<h2>
+Tell us what you envision.
+</h2>
+
+<p>
+From a simple printable invitation to a fully custom
+digital experience, we design around your event.
+</p>
+
+</div>
+
+<a class="btn btn-primary" href="#packages">
+Explore Packages →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div class="footer-brand">
+
+<img
+src="assets/logo/boreal-icon-gradient-transparent.png"
+alt="Boreal"
+>
+
+<span>
+Boreal Digital Design
+</span>
+
+</div>
+
+
+<div class="footer-links">
+
+<a href="#events">
+Events
+</a>
+
+<a href="#packages">
+Packages
+</a>
+
+<a href="#faq">
+FAQ
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
+</div>
+
+</div>
+
+
+<div class="tiny">
+© 2026 Boreal Digital Design.
+Digital products and services only.
+Printing is not included.
+</div>
+
+</div>
+
+</footer>
+
+
+<script>
+
+/* =========================
+   MARKET + LANGUAGE
+========================= */
+
+const packages = {
+
+US:{
+
+en:[
+{
+name:"ESSENTIAL",
+price:"$15",
+tag:"Digital Printable Invitation"
+},
+{
+name:"SIGNATURE",
+price:"$75",
+tag:"Interactive Wedding Invitation"
+},
+{
+name:"PREMIUM CUSTOM",
+price:"$125",
+tag:"Custom Interactive Wedding Experience"
+}
+],
+
+es:[
+{
+name:"ESSENTIAL",
+price:"$15",
+tag:"Invitación digital imprimible"
+},
+{
+name:"SIGNATURE",
+price:"$75",
+tag:"Invitación de boda interactiva"
+},
+{
+name:"PREMIUM CUSTOM",
+price:"$125",
+tag:"Experiencia de boda interactiva personalizada"
+}
+]
+
+},
+
+MX:{
+
+en:[
+{
+name:"BOREAL",
+price:"$250",
+tag:"Digital Printable Invitation"
+},
+{
+name:"SIGNATURE",
+price:"$1,350",
+tag:"Interactive Digital Invitation"
+},
+{
+name:"PREMIUM CUSTOM",
+price:"$2,250",
+tag:"Custom Interactive Experience"
+}
+],
+
+es:[
+{
+name:"BOREAL",
+price:"$250",
+tag:"Invitación digital imprimible"
+},
+{
+name:"SIGNATURE",
+price:"$1,350",
+tag:"Invitación digital interactiva"
+},
+{
+name:"PREMIUM CUSTOM",
+price:"$2,250",
+tag:"Experiencia interactiva personalizada"
+}
+]
+
+}
+
+};
+
+
+let market="US";
+let language="en";
+
+
+function updatePackages(){
+
+const list=packages[market][language];
+
+list.forEach((pkg,index)=>{
+
+const number=index+1;
+
+document.getElementById(
+"pkg"+number+"Name"
+).textContent=pkg.name;
+
+document.getElementById(
+"pkg"+number+"Price"
+).innerHTML=
+pkg.price+
+" <small>"+
+(market==="US"?"USD":"MXN")+
+"</small>";
+
+document.getElementById(
+"pkg"+number+"Tag"
+).textContent=pkg.tag;
+
+});
+
+}
+
+
+document.querySelectorAll(".market").forEach(button=>{
+
+button.addEventListener("click",()=>{
+
+market=button.dataset.market;
+
+document.querySelectorAll(".market").forEach(btn=>{
+btn.classList.remove("active");
+});
+
+button.classList.add("active");
+
+updatePackages();
+
+});
+
+});
+
+
+document.querySelectorAll(".lang").forEach(button=>{
+
+button.addEventListener("click",()=>{
+
+language=button.dataset.lang;
+
+document.querySelectorAll(".lang").forEach(btn=>{
+btn.classList.remove("active");
+});
+
+button.classList.add("active");
+
+updatePackages();
+
+});
+
+});
+
+
+/* MOBILE MENU */
+
+document.getElementById("menuBtn")
+.addEventListener("click",()=>{
+
+document
+.getElementById("navLinks")
+.classList
+.toggle("open");
+
+});
+
+
+document.querySelectorAll(".navlinks a")
+.forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+document
+.getElementById("navLinks")
+.classList
+.remove("open");
+
+});
+
+});
+
+
+updatePackages();
+
+</script>
+
+</body>
+</html>
