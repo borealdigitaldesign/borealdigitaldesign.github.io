@@ -72,6 +72,7 @@ header{
   display:flex;
   align-items:center;
   gap:25px;
+  position:relative;
 }
 
 .logo img{
@@ -118,6 +119,11 @@ header{
   font-weight:800;
   font-size:12px;
   cursor:pointer;
+  transition:.2s;
+}
+
+.control-group button:hover{
+  background:#f7f8fc;
 }
 
 .control-group button.active{
@@ -131,6 +137,8 @@ header{
   background:white;
   border-radius:12px;
   padding:9px 11px;
+  cursor:pointer;
+  font-size:18px;
 }
 
 /* =========================
@@ -696,7 +704,7 @@ footer{
 }
 
 /* =========================
-   MOBILE
+   TABLET / MOBILE
 ========================= */
 
 @media(max-width:1000px){
@@ -712,6 +720,7 @@ footer{
     flex-direction:column;
     align-items:flex-start;
     border-bottom:1px solid var(--line);
+    box-shadow:0 15px 30px rgba(16,38,74,.08);
   }
 
   .navlinks.open{
@@ -763,23 +772,75 @@ footer{
   }
 }
 
+/* =========================
+   MOBILE CONTROLS
+========================= */
+
 @media(max-width:620px){
+
+  .nav{
+    min-height:70px;
+    gap:10px;
+  }
+
+  .logo img{
+    width:150px;
+  }
+
+  /*
+     IMPORTANT:
+     Controls remain visible on mobile.
+     They appear in a separate row below the header.
+  */
+
+  .controls{
+    display:flex;
+    position:absolute;
+    top:70px;
+    left:0;
+    right:0;
+    width:100%;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    padding:10px 12px;
+    background:rgba(255,255,255,.98);
+    border-bottom:1px solid var(--line);
+    box-shadow:0 8px 18px rgba(16,38,74,.06);
+    z-index:110;
+  }
+
+  .control-group{
+    padding:3px;
+  }
+
+  .control-group button{
+    padding:8px 12px;
+    font-size:12px;
+    min-width:48px;
+  }
+
+  /*
+     Mobile menu now starts below
+     the language/market controls.
+  */
+
+  .navlinks{
+    top:120px;
+  }
+
+  .menu-btn{
+    margin-left:auto;
+    padding:8px 11px;
+  }
+
+  .hero{
+    padding:80px 0 50px;
+  }
 
   .hero-visual img{
     width:min(380px,95%);
     max-height:600px;
-  }
-
-  .logo img{
-    width:155px;
-  }
-
-  .controls{
-    display:none;
-  }
-
-  .hero{
-    padding:60px 0 50px;
   }
 
   h1{
@@ -830,6 +891,35 @@ footer{
     font-size:34px;
   }
 }
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media(max-width:380px){
+
+  .logo img{
+    width:135px;
+  }
+
+  .controls{
+    gap:5px;
+  }
+
+  .control-group button{
+    padding:7px 9px;
+    min-width:43px;
+    font-size:11px;
+  }
+
+  .navlinks{
+    top:118px;
+  }
+
+  h1{
+    font-size:44px;
+  }
+}
 </style>
 </head>
 
@@ -848,7 +938,9 @@ footer{
 alt="Boreal Digital Design">
 </a>
 
-<button class="menu-btn" id="menuBtn">☰</button>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu">
+☰
+</button>
 
 <nav class="navlinks" id="navLinks">
 
@@ -2408,6 +2500,10 @@ document
 
 });
 
+
+/* =========================================================
+   CLOSE MOBILE MENU AFTER CLICK
+========================================================= */
 
 document.querySelectorAll(".navlinks a")
 .forEach(link=>{
