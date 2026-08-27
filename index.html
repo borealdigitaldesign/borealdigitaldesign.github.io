@@ -1,58 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Boreal Digital Design — beautifully designed digital invitations for every celebration.">
-<title>Boreal Digital Design</title>
 
-<link rel="icon" type="image/png"
-href="assets/logo/boreal-icon-gradient-transparent.png">
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+name="description"
+content="Boreal Digital Design — elegant digital wedding invitations designed around your love story."
+>
+
+<title>Weddings — Boreal Digital Design</title>
+
+<link
+rel="icon"
+type="image/png"
+href="../assets/logo/boreal-icon-gradient-transparent.png"
+>
+
 
 <style>
 
+/* =========================================================
+   ROOT
+========================================================= */
+
 :root{
+
   --navy:#10264a;
   --ink:#18315a;
   --muted:#66738b;
+
   --line:#e8edf5;
+
   --cyan:#16c6d8;
   --purple:#8b55e8;
   --pink:#d85bb8;
+
   --soft:#f7f9fd;
+
   --white:#fff;
-  --shadow:0 18px 55px rgba(16,38,74,.10);
+
+  --shadow:
+    0 18px 55px rgba(16,38,74,.10);
+
 }
+
+
+/* =========================================================
+   RESET
+========================================================= */
 
 *{
+
   box-sizing:border-box;
+
   margin:0;
+
   padding:0;
+
 }
+
 
 html{
+
   scroll-behavior:smooth;
+
 }
+
 
 body{
-  font-family:Inter,Arial,sans-serif;
+
+  font-family:
+    Inter,
+    Arial,
+    sans-serif;
+
   color:var(--ink);
+
   background:#fff;
+
   line-height:1.55;
+
 }
+
 
 a{
+
   text-decoration:none;
+
   color:inherit;
+
 }
+
 
 button{
+
   font:inherit;
+
 }
 
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
 .container{
+
   width:min(1450px,96%);
+
   margin:auto;
+
 }
 
 
@@ -61,86 +123,166 @@ button{
 ========================================================= */
 
 header{
+
   position:sticky;
+
   top:0;
+
   z-index:100;
-  background:rgba(255,255,255,.94);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid var(--line);
+
+  background:
+    rgba(255,255,255,.94);
+
+  backdrop-filter:
+    blur(18px);
+
+  border-bottom:
+    1px solid var(--line);
+
 }
+
 
 .nav{
+
   min-height:78px;
+
   display:flex;
+
   align-items:center;
+
   gap:25px;
+
   position:relative;
+
 }
+
 
 .logo img{
+
   width:190px;
+
   max-height:58px;
+
   object-fit:contain;
+
 }
+
 
 .navlinks{
+
   display:flex;
+
   gap:24px;
+
   align-items:center;
+
   margin-left:auto;
+
 }
+
 
 .navlinks a{
+
   font-size:14px;
+
   font-weight:700;
+
 }
+
 
 .navlinks a:hover{
+
   color:var(--purple);
+
 }
+
 
 .controls{
+
   display:flex;
+
   gap:7px;
+
 }
+
 
 .control-group{
+
   display:flex;
-  border:1px solid var(--line);
+
+  border:
+    1px solid var(--line);
+
   border-radius:999px;
+
   padding:3px;
+
   background:white;
+
 }
+
 
 .control-group button{
+
   border:0;
+
   background:transparent;
+
   padding:7px 10px;
+
   border-radius:999px;
+
   color:var(--muted);
+
   font-weight:800;
+
   font-size:12px;
+
   cursor:pointer;
+
   transition:.2s;
+
 }
+
 
 .control-group button:hover{
+
   background:#f7f8fc;
+
 }
+
 
 .control-group button.active{
-  background:linear-gradient(90deg,#e8fbff,#f2edff);
+
+  background:
+    linear-gradient(
+      90deg,
+      #e8fbff,
+      #f2edff
+    );
+
   color:var(--ink);
+
 }
 
+
 .menu-btn{
+
   display:none;
-  border:1px solid var(--line);
+
+  border:
+    1px solid var(--line);
+
   background:white;
+
   border-radius:12px;
+
   padding:9px 11px;
+
   cursor:pointer;
+
   font-size:18px;
+
 }
 
 
@@ -149,655 +291,954 @@ header{
 ========================================================= */
 
 .hero{
+
   position:relative;
+
   overflow:hidden;
+
   background:
-    radial-gradient(circle at 78% 25%,rgba(22,198,216,.16),transparent 25%),
-    radial-gradient(circle at 88% 60%,rgba(139,85,232,.14),transparent 28%),
-    linear-gradient(135deg,#fff,#f5f3ff);
-  padding:85px 0 75px;
+
+    radial-gradient(
+      circle at 15% 25%,
+      rgba(22,198,216,.10),
+      transparent 27%
+    ),
+
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(139,85,232,.13),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 78% 80%,
+      rgba(216,91,184,.09),
+      transparent 25%
+    ),
+
+    linear-gradient(
+      135deg,
+      #fff,
+      #f7f4ff
+    );
+
+  padding:
+    90px 0 85px;
+
 }
+
 
 .hero-grid{
+
   position:relative;
+
   z-index:2;
+
   display:grid;
-  grid-template-columns:1fr .9fr;
-  gap:50px;
+
+  grid-template-columns:
+    1fr
+    .9fr;
+
+  gap:55px;
+
   align-items:center;
+
 }
+
 
 .eyebrow{
+
   display:flex;
+
   align-items:center;
+
   justify-content:flex-start;
+
   gap:8px;
+
   color:#7454d8;
+
   font-weight:900;
+
   letter-spacing:.16em;
+
   font-size:12px;
+
   line-height:1.2;
+
   text-transform:uppercase;
+
   margin-bottom:22px;
+
 }
+
 
 .eyebrow-line{
+
   width:28px;
+
   min-width:28px;
+
   height:2px;
-  background:linear-gradient(90deg,var(--cyan),var(--purple));
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--cyan),
+      var(--purple)
+    );
+
   display:block;
+
   flex:none;
+
 }
+
 
 .eyebrow-text{
+
   display:inline-block;
+
   width:auto;
+
   height:auto;
+
   line-height:1.2;
+
   white-space:nowrap;
+
 }
+
 
 h1{
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(52px,7vw,92px);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(54px,7vw,92px);
+
   line-height:.95;
+
   letter-spacing:-.045em;
+
   color:var(--navy);
+
 }
+
 
 h1 em{
+
   font-style:italic;
-  background:linear-gradient(90deg,#0faed0,#7b55e8,#c85dbd);
+
+  background:
+    linear-gradient(
+      90deg,
+      #0faed0,
+      #7b55e8,
+      #c85dbd
+    );
+
   -webkit-background-clip:text;
+
   color:transparent;
+
 }
+
 
 .hero-copy{
+
   font-size:18px;
+
   color:var(--muted);
+
   max-width:620px;
-  margin:25px 0 30px;
+
+  margin:
+    25px 0 30px;
+
 }
+
 
 .actions{
+
   display:flex;
+
   flex-wrap:wrap;
+
   gap:12px;
+
 }
+
 
 .btn{
+
   display:inline-flex;
+
   align-items:center;
+
   justify-content:center;
-  padding:14px 21px;
+
+  padding:
+    14px 21px;
+
   border-radius:14px;
+
   font-weight:900;
+
   font-size:14px;
+
   transition:.2s;
+
 }
+
 
 .btn:hover{
-  transform:translateY(-2px);
+
+  transform:
+    translateY(-2px);
+
 }
+
 
 .btn-primary{
+
   color:white;
-  background:linear-gradient(100deg,#11bfd2,#7559e7);
-  box-shadow:0 12px 25px rgba(91,91,220,.22);
+
+  background:
+    linear-gradient(
+      100deg,
+      #11bfd2,
+      #7559e7
+    );
+
+  box-shadow:
+    0 12px 25px
+    rgba(91,91,220,.22);
+
 }
+
 
 .btn-outline{
+
   color:var(--ink);
+
   background:white;
-  border:1px solid #cdd7e7;
+
+  border:
+    1px solid #cdd7e7;
+
 }
+
+
+/* =========================================================
+   HERO PHONE
+========================================================= */
 
 .hero-visual{
+
   display:flex;
+
   justify-content:center;
+
   align-items:center;
+
+  min-height:550px;
+
 }
 
+
 .hero-visual img{
-  width:min(620px,110%);
-  max-height:700px;
+
+  width:
+    min(620px,110%);
+
+  max-height:680px;
+
   object-fit:contain;
-  filter:drop-shadow(0 28px 35px rgba(16,38,74,.20));
-  animation:float 5s ease-in-out infinite;
+
+  filter:
+    drop-shadow(
+      0 28px 35px
+      rgba(16,38,74,.20)
+    );
+
+  animation:
+    float 5s ease-in-out infinite;
+
 }
+
 
 @keyframes float{
 
   50%{
-    transform:translateY(-9px);
+
+    transform:
+      translateY(-9px);
+
   }
 
 }
 
 
 /* =========================================================
-   SECTIONS
+   SECTION
 ========================================================= */
 
 .section{
-  padding:88px 0;
+
+  padding:
+    88px 0;
+
 }
+
 
 .section-soft{
-  background:var(--soft);
+
+  background:
+    var(--soft);
+
 }
+
 
 .section-head{
+
   text-align:center;
-  max-width:720px;
-  margin:0 auto 45px;
+
+  max-width:760px;
+
+  margin:
+    0 auto 45px;
+
 }
+
 
 .section-kicker{
+
   font-size:12px;
+
   text-transform:uppercase;
+
   letter-spacing:.18em;
+
   font-weight:900;
+
   color:#7a5be3;
+
   margin-bottom:9px;
+
 }
+
 
 h2{
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(36px,5vw,58px);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(36px,5vw,58px);
+
   line-height:1.05;
+
   color:var(--navy);
+
 }
+
 
 .section-head p{
+
   color:var(--muted);
+
   margin-top:14px;
+
   font-size:17px;
+
 }
 
 
 /* =========================================================
-   EVENT CATEGORIES
-   COMPACT CATALOG STYLE
+   FEATURED WEDDING
 ========================================================= */
 
-.event-grid{
+.featured{
+
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-  max-width:1250px;
-  margin:0 auto;
-}
 
-.event-card{
-  display:block;
-  background:white;
-  border:1px solid var(--line);
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 7px 24px rgba(16,38,74,.045);
-  transition:
-    transform .25s ease,
-    box-shadow .25s ease,
-    border-color .25s ease;
-}
+  grid-template-columns:
+    .95fr
+    1.05fr;
 
-.event-card:hover{
-  transform:translateY(-5px);
-  box-shadow:var(--shadow);
-  border-color:#d9d5f5;
-}
-
-.event-card-image{
-  position:relative;
-  overflow:hidden;
-  background:#f5f5f8;
-}
-
-.event-card img{
-  width:100%;
-  aspect-ratio:1.38/1;
-  object-fit:cover;
-  display:block;
-  transition:transform .45s ease;
-}
-
-.event-card:hover img{
-  transform:scale(1.035);
-}
-
-.event-card-arrow{
-  position:absolute;
-  right:13px;
-  bottom:13px;
-  width:36px;
-  height:36px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  background:rgba(255,255,255,.94);
-  color:var(--ink);
-  font-size:17px;
-  font-weight:900;
-  box-shadow:0 5px 18px rgba(16,38,74,.14);
-  transition:.25s;
-}
-
-.event-card:hover .event-card-arrow{
-  background:linear-gradient(135deg,#12bfd3,#7958e7);
-  color:white;
-  transform:translateX(2px);
-}
-
-.event-body{
-  padding:15px 17px 17px;
-}
-
-.event-body h3{
-  font-family:Georgia,serif;
-  font-size:23px;
-  line-height:1.15;
-  color:var(--navy);
-}
-
-.event-body p{
-  font-size:12.5px;
-  line-height:1.45;
-  color:var(--muted);
-  margin-top:4px;
-}
-
-.event-view{
-  display:inline-flex;
-  align-items:center;
-  gap:5px;
-  margin-top:10px;
-  font-size:11px;
-  font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-  color:#7255d9;
-}
-
-
-/* =========================================================
-   PACKAGES
-========================================================= */
-
-.market-note{
-  text-align:center;
-  color:var(--muted);
-  font-size:13px;
-  margin-bottom:28px;
-}
-
-.packages-wrap{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-  align-items:start;
-}
-
-.package{
-  background:white;
-  border:1px solid var(--line);
-  border-radius:24px;
-  padding:30px 25px;
-  box-shadow:0 10px 30px rgba(16,38,74,.05);
-  transition:
-    transform .25s ease,
-    box-shadow .25s ease,
-    border-color .25s ease;
-}
-
-.package:hover{
-  transform:translateY(-4px);
-  box-shadow:0 18px 45px rgba(16,38,74,.09);
-}
-
-
-/* =========================================================
-   PREMIUM CUSTOM — HERO PACKAGE
-========================================================= */
-
-.package.featured-package{
-  position:relative;
-  border:2px solid #8b66eb;
-  box-shadow:
-    0 20px 55px rgba(111,82,219,.18),
-    0 0 0 5px rgba(139,102,235,.045);
-  transform:translateY(-10px);
-  background:
-    linear-gradient(180deg,rgba(250,248,255,.98),#fff 18%);
-  z-index:2;
-}
-
-.package.featured-package:hover{
-  transform:translateY(-13px);
-  box-shadow:
-    0 25px 65px rgba(111,82,219,.22),
-    0 0 0 6px rgba(139,102,235,.055);
-}
-
-
-/* =========================================================
-   PREMIUM BADGE
-========================================================= */
-
-.ribbon{
-  background:linear-gradient(90deg,#14c3d6,#8656e6,#c85dbd);
-  color:white;
-  border-radius:999px;
-  padding:7px 12px;
-  font-size:10px;
-  font-weight:900;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  display:inline-block;
-  margin-bottom:12px;
-  box-shadow:0 7px 18px rgba(113,83,218,.18);
-}
-
-
-/* =========================================================
-   PACKAGE CONTENT
-========================================================= */
-
-.package .icon{
-  font-size:28px;
-}
-
-.package h3{
-  font-family:Georgia,serif;
-  font-size:29px;
-  color:var(--navy);
-  margin-top:8px;
-}
-
-.package.featured-package h3{
-  font-size:31px;
-}
-
-.price{
-  display:flex;
-  align-items:baseline;
-  gap:8px;
-  flex-wrap:wrap;
-  font-size:38px;
-  font-weight:950;
-  color:var(--ink);
-  margin:7px 0 3px;
-}
-
-.price-old{
-  font-size:20px;
-  font-weight:700;
-  color:#9aa5b7;
-  text-decoration:line-through;
-  text-decoration-thickness:2px;
-}
-
-.price-current{
-  font-size:38px;
-  font-weight:950;
-  color:var(--ink);
-}
-
-.package.featured-package .price-current{
-  font-size:41px;
-}
-
-.price small{
-  font-size:13px;
-  color:var(--muted);
-  font-weight:700;
-}
-
-.package-tag{
-  color:#6c7890;
-  font-size:13px;
-  min-height:42px;
-}
-
-.package.featured-package .package-tag{
-  color:#5c4bb7;
-  font-weight:800;
-}
-
-
-/* =========================================================
-   PREMIUM SUPPORTING MESSAGE
-========================================================= */
-
-.premium-message{
-  margin:4px 0 13px;
-  padding:10px 12px;
-  border-radius:12px;
-  background:linear-gradient(90deg,#f0fcff,#f7f1ff);
-  border:1px solid #e6e3f7;
-  color:#5d5a78;
-  font-size:12px;
-  line-height:1.45;
-  font-weight:700;
-}
-
-.premium-message strong{
-  color:#5d4ec5;
-}
-
-
-/* =========================================================
-   PACKAGE LIST
-========================================================= */
-
-.package ul{
-  list-style:none;
-  margin:18px 0 10px;
-}
-
-.package li{
-  font-size:13px;
-  color:#53627b;
-  padding:7px 0;
-  border-bottom:1px dashed #e9edf4;
-}
-
-.package li:before{
-  content:"✓";
-  color:#4c70dd;
-  font-weight:900;
-  margin-right:8px;
-}
-
-.package.featured-package li:before{
-  color:#7655df;
-}
-
-
-/* =========================================================
-   PACKAGE SHOW MORE / SHOW LESS
-========================================================= */
-
-.package-list li:nth-child(n+6){
-  display:none;
-}
-
-.package.expanded .package-list li:nth-child(n+6){
-  display:block;
-}
-
-.package-toggle{
-  border:0;
-  background:transparent;
-  color:#5d4ec5;
-  font-weight:900;
-  font-size:13px;
-  cursor:pointer;
-  padding:3px 0 8px;
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  transition:.2s;
-}
-
-.package-toggle:hover{
-  color:#7655df;
-}
-
-.package-toggle .toggle-arrow{
-  font-size:12px;
-  transition:transform .25s ease;
-}
-
-.package.expanded .package-toggle .toggle-arrow{
-  transform:rotate(180deg);
-}
-
-
-/* =========================================================
-   PACKAGE NOTE
-========================================================= */
-
-.package-note{
-  font-size:13px;
-  color:#66738b;
-  margin-top:8px;
-}
-
-
-/* =========================================================
-   HOW IT WORKS
-========================================================= */
-
-.steps{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-}
-
-.step{
-  background:white;
-  border:1px solid var(--line);
-  border-radius:22px;
-  padding:25px;
-}
-
-.step-num{
-  width:38px;
-  height:38px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  background:linear-gradient(135deg,#dffbff,#eee6ff);
-  font-weight:950;
-  color:#574fc0;
-  margin-bottom:18px;
-}
-
-.step h3{
-  font-family:Georgia,serif;
-  font-size:24px;
-  color:var(--navy);
-}
-
-.step p{
-  font-size:14px;
-  color:var(--muted);
-}
-
-
-/* =========================================================
-   ABOUT
-========================================================= */
-
-.about{
-  display:grid;
-  grid-template-columns:1fr 1fr;
   gap:60px;
+
   align-items:center;
+
+  background:white;
+
+  border:
+    1px solid var(--line);
+
+  border-radius:30px;
+
+  padding:
+    45px;
+
+  box-shadow:
+    0 15px 45px
+    rgba(16,38,74,.06);
+
+  overflow:hidden;
+
 }
 
-.about-card{
-  border-radius:28px;
-  background:linear-gradient(145deg,#f7fcff,#f5f0ff);
-  padding:38px;
-  min-height:300px;
-  display:grid;
-  place-items:center;
+
+.featured-visual{
+
+  min-height:520px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:
+
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(139,85,232,.12),
+      transparent 40%
+    ),
+
+    linear-gradient(
+      145deg,
+      #f8fcff,
+      #f7f2ff
+    );
+
+  border-radius:25px;
+
+  overflow:hidden;
+
 }
 
-.about-card img{
-  width:170px;
+
+.featured-visual img{
+
+  width:
+    min(570px,105%);
+
+  max-height:610px;
+
+  object-fit:contain;
+
+  filter:
+    drop-shadow(
+      0 25px 35px
+      rgba(16,38,74,.18)
+    );
+
+  transition:
+    transform .45s ease;
+
 }
 
-.about-copy p{
-  color:var(--muted);
+
+.featured:hover
+.featured-visual img{
+
+  transform:
+    translateY(-5px)
+    scale(1.015);
+
+}
+
+
+.featured-copy{
+
+  padding:
+    10px 10px 10px 0;
+
+}
+
+
+.featured-badge{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:7px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #eafcff,
+      #f4edff
+    );
+
+  color:#6252c6;
+
+  border:
+    1px solid #e5e0f7;
+
+  border-radius:999px;
+
+  padding:
+    8px 13px;
+
+  font-size:10px;
+
+  font-weight:900;
+
+  letter-spacing:.1em;
+
+  text-transform:uppercase;
+
+  margin-bottom:18px;
+
+}
+
+
+.featured-copy h3{
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(42px,5vw,65px);
+
+  line-height:1;
+
+  color:var(--navy);
+
+}
+
+
+.featured-copy h3 em{
+
+  font-style:italic;
+
+  font-weight:400;
+
+  color:#7559d8;
+
+}
+
+
+.featured-subtitle{
+
   font-size:17px;
-  margin:17px 0;
-}
 
-.about-list{
-  display:grid;
-  gap:11px;
-}
+  color:#6f5cc8;
 
-.about-list div{
   font-weight:800;
-  font-size:14px;
+
+  margin-top:13px;
+
+}
+
+
+.featured-copy p{
+
+  color:var(--muted);
+
+  font-size:16px;
+
+  max-width:560px;
+
+  margin:
+    20px 0 25px;
+
+}
+
+
+.featured-details{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  gap:11px;
+
+  margin:
+    0 0 28px;
+
+}
+
+
+.featured-detail{
+
+  padding:
+    12px 14px;
+
+  border:
+    1px solid var(--line);
+
+  border-radius:13px;
+
+  background:#fafbfe;
+
+}
+
+
+.featured-detail strong{
+
+  display:block;
+
+  color:var(--navy);
+
+  font-size:12px;
+
+  margin-bottom:2px;
+
+}
+
+
+.featured-detail span{
+
+  font-size:12px;
+
+  color:var(--muted);
+
 }
 
 
 /* =========================================================
-   FAQ
+   COLLECTION
 ========================================================= */
 
-.faq{
-  max-width:850px;
+.collection-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:20px;
+
+  max-width:1250px;
+
   margin:auto;
+
 }
 
-.faq details{
-  border-bottom:1px solid var(--line);
-  padding:20px 0;
+
+.collection-card{
+
+  background:white;
+
+  border:
+    1px solid var(--line);
+
+  border-radius:22px;
+
+  overflow:hidden;
+
+  box-shadow:
+    0 8px 28px
+    rgba(16,38,74,.045);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
+
 }
 
-.faq summary{
-  cursor:pointer;
-  font-weight:900;
+
+.collection-card:hover{
+
+  transform:
+    translateY(-5px);
+
+  box-shadow:
+    var(--shadow);
+
+  border-color:
+    #d9d5f5;
+
+}
+
+
+.collection-image{
+
+  aspect-ratio:
+    1.08 / 1;
+
+  background:
+
+    linear-gradient(
+      145deg,
+      #f8fcff,
+      #f6f0ff
+    );
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  overflow:hidden;
+
+}
+
+
+.collection-image img{
+
+  width:100%;
+
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+
+  transition:
+    transform .45s ease;
+
+}
+
+
+.collection-card:hover
+.collection-image img{
+
+  transform:
+    scale(1.035);
+
+}
+
+
+.collection-placeholder{
+
+  text-align:center;
+
+  padding:30px;
+
+  color:#a0a8b8;
+
+}
+
+
+.collection-placeholder .placeholder-icon{
+
+  font-size:38px;
+
+  margin-bottom:9px;
+
+}
+
+
+.collection-placeholder strong{
+
+  display:block;
+
+  color:#71809a;
+
+  font-family:Georgia,serif;
+
+  font-size:22px;
+
+}
+
+
+.collection-placeholder span{
+
+  font-size:12px;
+
+}
+
+
+.collection-body{
+
+  padding:
+    18px 18px 20px;
+
+}
+
+
+.collection-body h3{
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:24px;
+
   color:var(--navy);
+
 }
 
-.faq p{
+
+.collection-body p{
+
+  font-size:13px;
+
+  line-height:1.45;
+
   color:var(--muted);
-  margin-top:10px;
-  font-size:14px;
+
+  margin-top:5px;
+
+}
+
+
+.collection-view{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:6px;
+
+  margin-top:12px;
+
+  font-size:10px;
+
+  font-weight:900;
+
+  text-transform:uppercase;
+
+  letter-spacing:.08em;
+
+  color:#7255d9;
+
 }
 
 
 /* =========================================================
-   CONTACT
+   EXPERIENCE
+========================================================= */
+
+.experience{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:20px;
+
+}
+
+
+.experience-card{
+
+  background:white;
+
+  border:
+    1px solid var(--line);
+
+  border-radius:22px;
+
+  padding:28px;
+
+}
+
+
+.experience-icon{
+
+  width:45px;
+
+  height:45px;
+
+  border-radius:14px;
+
+  display:grid;
+
+  place-items:center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e3fbff,
+      #eee5ff
+    );
+
+  font-size:21px;
+
+  margin-bottom:17px;
+
+}
+
+
+.experience-card h3{
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:24px;
+
+  color:var(--navy);
+
+  margin-bottom:7px;
+
+}
+
+
+.experience-card p{
+
+  color:var(--muted);
+
+  font-size:14px;
+
+}
+
+
+/* =========================================================
+   CTA
 ========================================================= */
 
 .contact{
-  background:linear-gradient(135deg,#10264a,#172f5d 55%,#5c46a6);
+
+  background:
+    linear-gradient(
+      135deg,
+      #10264a,
+      #172f5d 55%,
+      #5c46a6
+    );
+
   color:white;
+
   border-radius:30px;
+
   padding:55px;
+
   display:flex;
+
   align-items:center;
+
   justify-content:space-between;
+
   gap:30px;
+
 }
+
 
 .contact h2{
+
   color:white;
+
 }
 
+
 .contact p{
+
   color:#dce5f7;
+
   max-width:620px;
+
   margin-top:10px;
+
 }
 
 
@@ -806,41 +1247,73 @@ h2{
 ========================================================= */
 
 footer{
-  padding:38px 0;
+
+  padding:
+    38px 0;
+
   background:#0d1d38;
+
   color:#b9c7df;
+
 }
+
 
 .footer-grid{
+
   display:flex;
+
   justify-content:space-between;
+
   gap:30px;
+
   align-items:center;
+
 }
+
 
 .footer-brand{
+
   display:flex;
+
   align-items:center;
+
   gap:13px;
+
   color:white;
+
   font-weight:900;
+
 }
+
 
 .footer-brand img{
+
   width:42px;
+
 }
+
 
 .footer-links{
+
   display:flex;
+
   gap:18px;
+
   flex-wrap:wrap;
+
   font-size:13px;
+
 }
 
+
 .tiny{
+
   font-size:12px;
+
   margin-top:18px;
+
   color:#91a3c2;
+
 }
 
 
@@ -851,371 +1324,524 @@ footer{
 @media(max-width:1000px){
 
   .navlinks{
+
     display:none;
+
     position:absolute;
+
     top:78px;
+
     left:0;
+
     right:0;
+
     background:white;
-    padding:20px 4%;
+
+    padding:
+      20px 4%;
+
     flex-direction:column;
+
     align-items:flex-start;
-    border-bottom:1px solid var(--line);
-    box-shadow:0 15px 30px rgba(16,38,74,.08);
+
+    border-bottom:
+      1px solid var(--line);
+
+    box-shadow:
+      0 15px 30px
+      rgba(16,38,74,.08);
+
   }
+
 
   .navlinks.open{
+
     display:flex;
+
   }
+
 
   .menu-btn{
+
     display:block;
+
     margin-left:auto;
+
   }
 
-  .hero-grid,
-  .about{
-    grid-template-columns:1fr;
-  }
 
-  .hero{
+  .hero-grid{
+
+    grid-template-columns:
+      1fr;
+
     text-align:center;
+
   }
+
 
   .eyebrow{
+
     justify-content:center;
+
   }
+
 
   .hero-copy{
+
     margin-left:auto;
+
     margin-right:auto;
+
   }
+
 
   .actions{
+
     justify-content:center;
+
   }
 
 
-  /*
-     EVENT CATEGORIES
-     2 columns on tablet
-  */
+  .hero-visual{
 
-  .event-grid{
-    grid-template-columns:repeat(2,1fr);
+    min-height:480px;
+
+  }
+
+
+  .featured{
+
+    grid-template-columns:
+      1fr;
+
+    padding:30px;
+
+  }
+
+
+  .featured-copy{
+
+    padding:5px;
+
+    text-align:center;
+
+  }
+
+
+  .featured-copy p{
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+  }
+
+
+  .featured-details{
+
+    max-width:600px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+  }
+
+
+  .featured-visual{
+
+    min-height:500px;
+
+  }
+
+
+  .collection-grid{
+
+    grid-template-columns:
+      repeat(2,1fr);
+
     max-width:850px;
+
   }
 
 
-  /*
-     PACKAGES
-     Tablet keeps a clean vertical layout
-  */
+  .experience{
 
-  .packages-wrap{
-    grid-template-columns:1fr;
-  }
+    grid-template-columns:
+      1fr;
 
-  .package.featured-package{
-    transform:none;
-    order:-1;
-  }
-
-  .package.featured-package:hover{
-    transform:translateY(-4px);
-  }
-
-
-  .steps{
-    grid-template-columns:repeat(2,1fr);
   }
 
 }
 
 
 /* =========================================================
-   MOBILE CONTROLS
+   MOBILE
 ========================================================= */
 
 @media(max-width:620px){
 
   .nav{
+
     min-height:70px;
+
     gap:10px;
+
   }
+
 
   .logo img{
+
     width:150px;
+
   }
+
 
   .controls{
+
     display:flex;
+
     position:absolute;
+
     top:70px;
+
     left:0;
+
     right:0;
+
     width:100%;
+
     justify-content:center;
+
     align-items:center;
+
     gap:8px;
-    padding:10px 12px;
-    background:rgba(255,255,255,.98);
-    border-bottom:1px solid var(--line);
-    box-shadow:0 8px 18px rgba(16,38,74,.06);
+
+    padding:
+      10px 12px;
+
+    background:
+      rgba(255,255,255,.98);
+
+    border-bottom:
+      1px solid var(--line);
+
+    box-shadow:
+      0 8px 18px
+      rgba(16,38,74,.06);
+
     z-index:110;
+
   }
+
 
   .control-group{
+
     padding:3px;
+
   }
+
 
   .control-group button{
-    padding:8px 12px;
+
+    padding:
+      8px 12px;
+
     font-size:12px;
+
     min-width:48px;
+
   }
+
 
   .navlinks{
+
     top:120px;
+
   }
+
 
   .menu-btn{
+
     margin-left:auto;
-    padding:8px 11px;
+
+    padding:
+      8px 11px;
+
   }
+
 
   .hero{
-    padding:80px 0 50px;
+
+    padding:
+      80px 0 50px;
+
   }
+
 
   .eyebrow{
+
     margin-bottom:28px;
-    line-height:1.2;
+
   }
+
 
   .eyebrow-line{
+
     width:24px;
+
     min-width:24px;
+
   }
 
-  .eyebrow-text{
-    white-space:nowrap;
+
+  .hero-visual{
+
+    min-height:390px;
+
   }
+
 
   .hero-visual img{
-    width:min(380px,95%);
-    max-height:600px;
+
+    width:
+      min(380px,95%);
+
+    max-height:500px;
+
   }
+
 
   h1{
+
     font-size:50px;
+
     line-height:.96;
+
   }
+
 
   .hero-copy{
+
     font-size:16px;
+
   }
+
 
   .section{
-    padding:65px 0;
+
+    padding:
+      65px 0;
+
   }
 
 
-  /*
-     2 COLUMN MOBILE CATALOG
-  */
+  .section-head{
 
-  .event-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:12px;
-    width:100%;
+    margin-bottom:32px;
+
   }
 
-  .event-card{
-    border-radius:16px;
+
+  .section-head p{
+
+    font-size:15px;
+
   }
 
-  .event-card img{
-    aspect-ratio:1.08/1;
+
+  .featured{
+
+    padding:15px;
+
+    border-radius:22px;
+
   }
 
-  .event-card-arrow{
-    width:30px;
-    height:30px;
-    right:8px;
-    bottom:8px;
-    font-size:14px;
+
+  .featured-visual{
+
+    min-height:390px;
+
+    border-radius:18px;
+
   }
 
-  .event-body{
-    padding:11px 11px 13px;
+
+  .featured-visual img{
+
+    width:105%;
+
+    max-height:450px;
+
   }
 
-  .event-body h3{
-    font-size:18px;
-    line-height:1.12;
+
+  .featured-copy{
+
+    padding:
+      20px 8px 15px;
+
   }
 
-  .event-body p{
-    font-size:11px;
-    line-height:1.35;
-    margin-top:4px;
-  }
 
-  .event-view{
+  .featured-badge{
+
     font-size:9px;
-    margin-top:8px;
+
+    padding:
+      7px 11px;
+
   }
 
 
-  /* =====================================================
-     PACKAGES ON MOBILE
+  .featured-copy h3{
 
-     Signature + Premium Custom:
-     top row, 2 columns
+    font-size:43px;
 
-     Essential:
-     full width underneath
-  ===================================================== */
-
-  .packages-wrap{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:12px;
-    align-items:start;
   }
 
-  .package{
-    padding:22px 16px;
-    border-radius:20px;
+
+  .featured-subtitle{
+
+    font-size:15px;
+
   }
 
-  /*
-     Reorder:
-     Signature = first
-     Premium = second
-     Essential = third
-  */
 
-  .package:nth-child(1){
-    order:3;
-    grid-column:1 / -1;
-  }
+  .featured-copy p{
 
-  .package:nth-child(2){
-    order:1;
-    grid-column:auto;
-  }
-
-  .package:nth-child(3){
-    order:2;
-    grid-column:auto;
-  }
-
-  /*
-     Remove desktop premium lift on mobile
-  */
-
-  .package.featured-package{
-    transform:none;
-  }
-
-  .package.featured-package:hover{
-    transform:translateY(-3px);
-  }
-
-  .package .icon{
-    font-size:24px;
-  }
-
-  .package h3{
-    font-size:22px;
-    line-height:1.1;
-  }
-
-  .package.featured-package h3{
-    font-size:23px;
-  }
-
-  .price{
-    gap:5px;
-    font-size:29px;
-    line-height:1.1;
-  }
-
-  .price-old{
     font-size:14px;
+
+    margin:
+      16px 0 20px;
+
   }
 
-  .price-current{
-    font-size:29px;
+
+  .featured-details{
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap:8px;
+
   }
 
-  .package.featured-package .price-current{
-    font-size:31px;
+
+  .featured-detail{
+
+    padding:
+      10px 11px;
+
   }
 
-  .price small{
+
+  .featured-detail strong{
+
     font-size:10px;
+
   }
 
-  .package-tag{
-    font-size:11px;
-    line-height:1.35;
-    min-height:38px;
-  }
 
-  .package ul{
-    margin:13px 0 7px;
-  }
+  .featured-detail span{
 
-  .package li{
-    font-size:11px;
-    line-height:1.35;
-    padding:6px 0;
-  }
-
-  .package li:before{
-    margin-right:5px;
-  }
-
-  .package-toggle{
-    font-size:11px;
-    padding-bottom:7px;
-  }
-
-  .premium-message{
     font-size:10px;
-    padding:8px 9px;
-    margin:3px 0 9px;
-  }
 
-  .package-note{
-    font-size:10.5px !important;
-    line-height:1.4;
   }
 
 
-  .steps{
-    grid-template-columns:1fr;
+  .collection-grid{
+
+    grid-template-columns:
+      repeat(2,minmax(0,1fr));
+
+    gap:12px;
+
   }
 
-  .checks{
-    grid-template-columns:1fr;
+
+  .collection-card{
+
+    border-radius:16px;
+
   }
+
+
+  .collection-image{
+
+    aspect-ratio:
+      1 / 1;
+
+  }
+
+
+  .collection-body{
+
+    padding:
+      12px 11px 14px;
+
+  }
+
+
+  .collection-body h3{
+
+    font-size:18px;
+
+    line-height:1.12;
+
+  }
+
+
+  .collection-body p{
+
+    font-size:10.5px;
+
+  }
+
+
+  .collection-view{
+
+    font-size:8.5px;
+
+    margin-top:8px;
+
+  }
+
+
+  .experience-card{
+
+    padding:23px;
+
+  }
+
 
   .contact{
-    padding:35px 24px;
+
+    padding:
+      35px 24px;
+
     flex-direction:column;
+
     text-align:center;
+
   }
+
 
   .contact h2{
+
     font-size:38px;
+
   }
 
+
   .footer-grid{
+
     flex-direction:column;
+
     align-items:flex-start;
+
   }
 
 }
@@ -1228,91 +1854,100 @@ footer{
 @media(max-width:380px){
 
   .logo img{
+
     width:135px;
+
   }
+
 
   .controls{
+
     gap:5px;
+
   }
+
 
   .control-group button{
-    padding:7px 9px;
+
+    padding:
+      7px 9px;
+
     min-width:43px;
+
     font-size:11px;
+
   }
+
 
   .navlinks{
+
     top:118px;
+
   }
 
-  .eyebrow{
-    margin-bottom:25px;
-  }
 
   .eyebrow-line{
+
     width:20px;
+
     min-width:20px;
+
   }
+
 
   .eyebrow-text{
+
     font-size:11px;
+
   }
+
 
   h1{
+
     font-size:44px;
-    line-height:.97;
+
   }
 
-  .event-grid{
+
+  .featured-copy h3{
+
+    font-size:38px;
+
+  }
+
+
+  .collection-grid{
+
     gap:9px;
+
   }
 
-  .event-body{
-    padding:9px 9px 11px;
+
+  .collection-body{
+
+    padding:
+      10px 9px 12px;
+
   }
 
-  .event-body h3{
+
+  .collection-body h3{
+
     font-size:16px;
-  }
 
-  .event-body p{
-    font-size:10px;
   }
 
 
-  /* Smaller package cards */
+  .collection-body p{
 
-  .packages-wrap{
-    gap:9px;
-  }
+    font-size:9.5px;
 
-  .package{
-    padding:19px 13px;
-  }
-
-  .package h3{
-    font-size:20px;
-  }
-
-  .package.featured-package h3{
-    font-size:20px;
-  }
-
-  .price-current{
-    font-size:26px;
-  }
-
-  .package.featured-package .price-current{
-    font-size:28px;
-  }
-
-  .package li{
-    font-size:10.5px;
   }
 
 }
 
 </style>
+
 </head>
 
 
@@ -1327,10 +1962,14 @@ footer{
 
 <div class="container nav">
 
-<a class="logo" href="#home">
+
+<a
+class="logo"
+href="../"
+>
 
 <img
-src="assets/logo/boreal-full-logo-gradient-transparent.png"
+src="../assets/logo/boreal-full-logo-gradient-transparent.png"
 alt="Boreal Digital Design"
 >
 
@@ -1352,42 +1991,47 @@ id="navLinks"
 >
 
 <a
-href="#events"
+href="../#events"
 data-i18n="navEvents"
 >
 Events
 </a>
 
+
 <a
-href="#packages"
+href="../#packages"
 data-i18n="navPackages"
 >
 Packages
 </a>
 
+
 <a
-href="#how"
+href="../#how"
 data-i18n="navHow"
 >
 How It Works
 </a>
 
+
 <a
-href="#about"
+href="../#about"
 data-i18n="navAbout"
 >
 About
 </a>
 
+
 <a
-href="#faq"
+href="../#faq"
 data-i18n="navFaq"
 >
 FAQ
 </a>
 
+
 <a
-href="#contact"
+href="../#contact"
 data-i18n="navContact"
 >
 Contact
@@ -1398,6 +2042,7 @@ Contact
 
 <div class="controls">
 
+
 <div class="control-group">
 
 <button
@@ -1406,6 +2051,7 @@ data-market="US"
 >
 🇺🇸 US
 </button>
+
 
 <button
 class="market"
@@ -1426,6 +2072,7 @@ data-lang="en"
 EN
 </button>
 
+
 <button
 class="lang"
 data-lang="es"
@@ -1443,7 +2090,7 @@ ES
 
 
 
-<main id="home">
+<main>
 
 
 <!-- =========================================================
@@ -1465,7 +2112,7 @@ ES
 class="eyebrow-text"
 data-i18n="heroEyebrow"
 >
-Digital Invitations
+Wedding Invitations
 </span>
 
 <span class="eyebrow-line"></span>
@@ -1476,8 +2123,9 @@ Digital Invitations
 <h1
 data-i18n-html="heroTitle"
 >
-Beautifully <em>designed</em>
-for every celebration.
+Your love story,
+<br>
+<em>beautifully invited.</em>
 </h1>
 
 
@@ -1485,40 +2133,44 @@ for every celebration.
 class="hero-copy"
 data-i18n="heroCopy"
 >
-From elegant essentials to completely custom experiences,
-we create digital invitations designed around your event,
-your style, and your vision.
+Elegant digital wedding invitations created to
+reflect your story, your style and the feeling
+you want your guests to experience from the very first moment.
 </p>
 
 
 <div class="actions">
 
+
 <a
 class="btn btn-primary"
-href="#events"
+href="#featured"
 data-i18n="heroBtn1"
 >
-Explore Invitations →
+Explore Wedding Collection →
 </a>
+
 
 <a
 class="btn btn-outline"
-href="#packages"
+href="../#packages"
 data-i18n="heroBtn2"
 >
 View Packages →
 </a>
 
+
 </div>
 
 </div>
+
 
 
 <div class="hero-visual">
 
 <img
-src="assets/hero/boreal-hero-invitation.png"
-alt="Boreal digital invitation"
+src="emily-james-featured-phone.png"
+alt="Emily & James digital wedding invitation"
 >
 
 </div>
@@ -1531,369 +2183,12 @@ alt="Boreal digital invitation"
 
 
 <!-- =========================================================
-     EVENT CATEGORIES
-========================================================= -->
-
-<section
-class="section section-soft"
-id="events"
->
-
-<div class="container">
-
-
-<div class="section-head">
-
-<div
-class="section-kicker"
-data-i18n="eventsKicker"
->
-Event Categories
-</div>
-
-
-<h2
-data-i18n="eventsTitle"
->
-Invitations for every celebration.
-</h2>
-
-
-<p
-data-i18n="eventsCopy"
->
-Whether it is a wedding, milestone, shower or
-corporate gathering, we design the invitation
-around the moment.
-</p>
-
-</div>
-
-
-
-<div class="event-grid">
-
-
-<!-- =====================================================
-     WEDDINGS
-===================================================== -->
-
-<a
-class="event-card"
-href="weddings/"
-aria-label="View wedding invitations"
->
-
-<div class="event-card-image">
-
-<img
-src="assets/events/weddings.png"
-alt="Weddings"
->
-
-<span class="event-card-arrow">
-→
-</span>
-
-</div>
-
-
-<div class="event-body">
-
-<h3
-data-i18n="eventWeddingTitle"
->
-Weddings
-</h3>
-
-<p
-data-i18n="eventWeddingCopy"
->
-Romantic, elegant and completely yours.
-</p>
-
-<span
-class="event-view"
-data-i18n="eventView"
->
-View collection →
-</span>
-
-</div>
-
-</a>
-
-
-
-<!-- =====================================================
-     BIRTHDAYS
-===================================================== -->
-
-<a
-class="event-card"
-href="birthdays/"
-aria-label="View birthday invitations"
->
-
-<div class="event-card-image">
-
-<img
-src="assets/events/birthdays.png"
-alt="Birthdays and celebrations"
->
-
-<span class="event-card-arrow">
-→
-</span>
-
-</div>
-
-
-<div class="event-body">
-
-<h3
-data-i18n="eventBirthdayTitle"
->
-Birthdays &amp; Celebrations
-</h3>
-
-<p
-data-i18n="eventBirthdayCopy"
->
-Make every milestone worth sharing.
-</p>
-
-<span
-class="event-view"
-data-i18n="eventView"
->
-View collection →
-</span>
-
-</div>
-
-</a>
-
-
-
-<!-- =====================================================
-     BABY SHOWERS
-===================================================== -->
-
-<a
-class="event-card"
-href="baby-showers/"
-aria-label="View baby shower invitations"
->
-
-<div class="event-card-image">
-
-<img
-src="assets/events/baby-showers.png"
-alt="Baby Showers"
->
-
-<span class="event-card-arrow">
-→
-</span>
-
-</div>
-
-
-<div class="event-body">
-
-<h3
-data-i18n="eventBabyTitle"
->
-Baby Showers
-</h3>
-
-<p
-data-i18n="eventBabyCopy"
->
-Sweet details for a little one on the way.
-</p>
-
-<span
-class="event-view"
-data-i18n="eventView"
->
-View collection →
-</span>
-
-</div>
-
-</a>
-
-
-
-<!-- =====================================================
-     QUINCEAÑERAS
-===================================================== -->
-
-<a
-class="event-card"
-href="quinceaneras/"
-aria-label="View quinceanera invitations"
->
-
-<div class="event-card-image">
-
-<img
-src="assets/events/quinceaneras.png"
-alt="Quinceañeras"
->
-
-<span class="event-card-arrow">
-→
-</span>
-
-</div>
-
-
-<div class="event-body">
-
-<h3
-data-i18n="eventQuinceTitle"
->
-Quinceañeras
-</h3>
-
-<p
-data-i18n="eventQuinceCopy"
->
-A celebration designed around her moment.
-</p>
-
-<span
-class="event-view"
-data-i18n="eventView"
->
-View collection →
-</span>
-
-</div>
-
-</a>
-
-
-
-<!-- =====================================================
-     GRADUATIONS
-===================================================== -->
-
-<a
-class="event-card"
-href="graduations/"
-aria-label="View graduation invitations"
->
-
-<div class="event-card-image">
-
-<img
-src="assets/events/graduations.png"
-alt="Graduations"
->
-
-<span class="event-card-arrow">
-→
-</span>
-
-</div>
-
-
-<div class="event-body">
-
-<h3
-data-i18n="eventGraduationTitle"
->
-Graduations
-</h3>
-
-<p
-data-i18n="eventGraduationCopy"
->
-Celebrate new beginnings in style.
-</p>
-
-<span
-class="event-view"
-data-i18n="eventView"
->
-View collection →
-</span>
-
-</div>
-
-</a>
-
-
-
-<!-- =====================================================
-     CORPORATE
-===================================================== -->
-
-<a
-class="event-card"
-href="corporate-events/"
-aria-label="View corporate event invitations"
->
-
-<div class="event-card-image">
-
-<img
-src="assets/events/corporate-events.png"
-alt="Corporate Events"
->
-
-<span class="event-card-arrow">
-→
-</span>
-
-</div>
-
-
-<div class="event-body">
-
-<h3
-data-i18n="eventCorporateTitle"
->
-Corporate Events
-</h3>
-
-<p
-data-i18n="eventCorporateCopy"
->
-Professional invitations that make an impression.
-</p>
-
-<span
-class="event-view"
-data-i18n="eventView"
->
-View collection →
-</span>
-
-</div>
-
-</a>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================================
-     PACKAGES
+     FEATURED WEDDING
 ========================================================= -->
 
 <section
 class="section"
-id="packages"
+id="featured"
 >
 
 <div class="container">
@@ -1903,570 +2198,504 @@ id="packages"
 
 <div
 class="section-kicker"
-data-i18n="packagesKicker"
+data-i18n="featuredKicker"
 >
-Our Packages
+Featured Wedding
 </div>
 
 
 <h2
-data-i18n="packagesTitle"
+data-i18n="featuredTitle"
 >
-Choose the experience that fits your event.
+Meet Emily &amp; James.
 </h2>
 
 
 <p
-data-i18n="packagesCopy"
+data-i18n="featuredIntro"
 >
-Three clear options, from a beautiful printable invitation
-to a fully custom interactive experience.
+A glimpse into what a beautifully designed
+digital wedding experience can look like.
 </p>
 
 </div>
 
 
-<div
-class="market-note"
-data-i18n="marketNote"
+
+<div class="featured">
+
+
+<div class="featured-visual">
+
+<img
+src="emily-james-featured-phone.png"
+alt="Emily & James featured wedding invitation"
 >
-🌎 Prices update automatically for your selected market.
+
 </div>
 
 
 
-<div class="packages-wrap">
+<div class="featured-copy">
 
 
-<!-- =====================================================
-     ESSENTIAL
-===================================================== -->
-
-<article class="package">
-
-<div class="icon">
-✉️
+<div
+class="featured-badge"
+data-i18n="featuredBadge"
+>
+✦ Premium Custom Sample
 </div>
 
-<h3 id="pkg1Name">
-ESSENTIAL
+
+<h3>
+Emily <em>&amp;</em> James
 </h3>
 
 
 <div
-class="price"
-id="pkg1Price"
+class="featured-subtitle"
+data-i18n="featuredSubtitle"
 >
-
-<span class="price-current">
-$15
-</span>
-
-<small>
-USD
-</small>
-
+A romantic digital wedding experience.
 </div>
-
-
-<div
-class="package-tag"
-id="pkg1Tag"
->
-Digital Printable Invitation
-</div>
-
-
-<ul
-class="package-list"
-id="pkg1List"
->
-
-<li data-i18n="pkg1item1">
-High-resolution PNG
-</li>
-
-<li data-i18n="pkg1item2">
-Standard invitation size
-</li>
-
-<li data-i18n="pkg1item3">
-Personalized with your event details
-</li>
-
-<li data-i18n="pkg1item4">
-Digital delivery
-</li>
-
-<li data-i18n="pkg1item5">
-1 round of changes
-</li>
-
-</ul>
-
-
-<button
-class="package-toggle"
-type="button"
-data-package-toggle="1"
-aria-expanded="false"
->
-<span
-class="toggle-text"
-data-i18n="showMore"
->
-Show more
-</span>
-
-<span class="toggle-arrow">
-⌄
-</span>
-
-</button>
 
 
 <p
-class="package-note"
-data-i18n="pkg1Note"
+data-i18n="featuredCopy"
 >
-Printing is not included.
-Print at the printer of your choice.
+Designed as a complete digital experience,
+this wedding invitation brings together elegant
+visuals, thoughtful details and interactive features
+in one beautiful place.
 </p>
 
-</article>
+
+
+<div class="featured-details">
+
+
+<div class="featured-detail">
+
+<strong
+data-i18n="detail1Title"
+>
+Style
+</strong>
+
+<span
+data-i18n="detail1Text"
+>
+Elegant &amp; romantic
+</span>
+
+</div>
+
+
+<div class="featured-detail">
+
+<strong
+data-i18n="detail2Title"
+>
+Experience
+</strong>
+
+<span
+data-i18n="detail2Text"
+>
+Interactive website
+</span>
+
+</div>
+
+
+<div class="featured-detail">
+
+<strong
+data-i18n="detail3Title"
+>
+Perfect For
+</strong>
+
+<span
+data-i18n="detail3Text"
+>
+Modern weddings
+</span>
+
+</div>
+
+
+<div class="featured-detail">
+
+<strong
+data-i18n="detail4Title"
+>
+Customization
+</strong>
+
+<span
+data-i18n="detail4Text"
+>
+Fully personalized
+</span>
+
+</div>
+
+
+</div>
+
+
+
+<a
+class="btn btn-primary"
+href="emily-james/"
+data-i18n="featuredBtn"
+>
+View Emily &amp; James →
+</a>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WEDDING COLLECTION
+========================================================= -->
+
+<section
+class="section section-soft"
+id="collection"
+>
+
+<div class="container">
+
+
+<div class="section-head">
+
+<div
+class="section-kicker"
+data-i18n="collectionKicker"
+>
+Wedding Collection
+</div>
+
+
+<h2
+data-i18n="collectionTitle"
+>
+Find the style that feels like you.
+</h2>
+
+
+<p
+data-i18n="collectionCopy"
+>
+Explore our wedding designs and discover
+the invitation that feels right for your celebration.
+</p>
+
+</div>
+
+
+
+<div class="collection-grid">
+
+
+<!-- =====================================================
+     EMILY & JAMES
+===================================================== -->
+
+<a
+class="collection-card"
+href="emily-james/"
+>
+
+<div class="collection-image">
+
+<img
+src="emily-james-featured-phone.png"
+alt="Emily & James wedding invitation"
+>
+
+</div>
+
+
+<div class="collection-body">
+
+<h3>
+Emily &amp; James
+</h3>
+
+
+<p
+data-i18n="collectionEmilyCopy"
+>
+Romantic, elegant and timeless.
+</p>
+
+
+<span
+class="collection-view"
+data-i18n="collectionView"
+>
+View invitation →
+</span>
+
+</div>
+
+</a>
 
 
 
 <!-- =====================================================
-     SIGNATURE
-     NO "MOST POPULAR" BADGE
+     COMING SOON 1
 ===================================================== -->
 
-<article class="package">
+<div class="collection-card">
 
-<div class="icon">
+<div class="collection-image">
+
+<div class="collection-placeholder">
+
+<div class="placeholder-icon">
+✦
+</div>
+
+<strong
+data-i18n="comingSoonTitle"
+>
+Coming Soon
+</strong>
+
+<span
+data-i18n="comingSoonText"
+>
+New wedding design
+</span>
+
+</div>
+
+</div>
+
+
+<div class="collection-body">
+
+<h3
+data-i18n="collectionComingTitle1"
+>
+Romantic
+</h3>
+
+
+<p
+data-i18n="collectionComingCopy1"
+>
+A new love story is coming soon.
+</p>
+
+
+<span
+class="collection-view"
+data-i18n="comingSoonLabel"
+>
+Coming soon
+</span>
+
+</div>
+
+</div>
+
+
+
+<!-- =====================================================
+     COMING SOON 2
+===================================================== -->
+
+<div class="collection-card">
+
+<div class="collection-image">
+
+<div class="collection-placeholder">
+
+<div class="placeholder-icon">
+♡
+</div>
+
+<strong
+data-i18n="comingSoonTitle"
+>
+Coming Soon
+</strong>
+
+<span
+data-i18n="comingSoonText"
+>
+New wedding design
+</span>
+
+</div>
+
+</div>
+
+
+<div class="collection-body">
+
+<h3
+data-i18n="collectionComingTitle2"
+>
+Modern
+</h3>
+
+
+<p
+data-i18n="collectionComingCopy2"
+>
+A fresh contemporary wedding style.
+</p>
+
+
+<span
+class="collection-view"
+data-i18n="comingSoonLabel"
+>
+Coming soon
+</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WEDDING EXPERIENCE
+========================================================= -->
+
+<section
+class="section"
+>
+
+<div class="container">
+
+
+<div class="section-head">
+
+<div
+class="section-kicker"
+data-i18n="experienceKicker"
+>
+The Boreal Experience
+</div>
+
+
+<h2
+data-i18n="experienceTitle"
+>
+More than an invitation.
+</h2>
+
+
+<p
+data-i18n="experienceCopy"
+>
+Your wedding invitation can become the place
+where your guests discover every important detail
+about your celebration.
+</p>
+
+</div>
+
+
+
+<div class="experience">
+
+
+<div class="experience-card">
+
+
+<div class="experience-icon">
 💌
 </div>
 
 
-<h3 id="pkg2Name">
-SIGNATURE
+<h3
+data-i18n="experience1Title"
+>
+Beautifully Designed
 </h3>
-
-
-<div
-class="price"
-id="pkg2Price"
->
-
-<span class="price-old">
-$95
-</span>
-
-<span class="price-current">
-$75
-</span>
-
-<small>
-USD
-</small>
-
-</div>
-
-
-<div
-class="package-tag"
-id="pkg2Tag"
->
-Interactive Digital Invitation
-</div>
-
-
-<ul
-class="package-list"
-id="pkg2List"
->
-
-<li data-i18n="pkg2item1">
-Interactive digital invitation website
-</li>
-
-<li data-i18n="pkg2item2">
-Digital PDF backup
-</li>
-
-<li data-i18n="pkg2item3">
-Your 5 favorite photos
-</li>
-
-<li data-i18n="pkg2item4">
-Event details + map
-</li>
-
-<li data-i18n="pkg2item5">
-Celebration details + map
-</li>
-
-<li data-i18n="pkg2item6">
-Add to calendar
-</li>
-
-<li data-i18n="pkg2item7">
-RSVP / Contact button
-</li>
-
-<li data-i18n="pkg2item8">
-Optional background music
-</li>
-
-<li data-i18n="pkg2item9">
-Dress code
-</li>
-
-<li data-i18n="pkg2item10">
-Registry / Gifts
-</li>
-
-<li data-i18n="pkg2item11">
-Details to keep in mind
-</li>
-
-<li data-i18n="pkg2item12">
-2 rounds of changes
-</li>
-
-</ul>
-
-
-<button
-class="package-toggle"
-type="button"
-data-package-toggle="2"
-aria-expanded="false"
->
-
-<span
-class="toggle-text"
-data-i18n="showMore"
->
-Show more
-</span>
-
-<span class="toggle-arrow">
-⌄
-</span>
-
-</button>
-
-
-</article>
-
-
-
-<!-- =====================================================
-     PREMIUM CUSTOM
-     HERO PACKAGE
-===================================================== -->
-
-<article
-class="package featured-package"
->
-
-<div
-class="ribbon"
-data-i18n="mostPersonalized"
->
-Most Personalized
-</div>
-
-
-<div class="icon">
-👑
-</div>
-
-
-<h3 id="pkg3Name">
-PREMIUM CUSTOM
-</h3>
-
-
-<div
-class="price"
-id="pkg3Price"
->
-
-<span class="price-old">
-$165
-</span>
-
-<span class="price-current">
-$125
-</span>
-
-<small>
-USD
-</small>
-
-</div>
-
-
-<div
-class="package-tag"
-id="pkg3Tag"
->
-Custom Interactive Experience
-</div>
-
-
-<div
-class="premium-message"
-data-i18n="premiumMessage"
->
-✨ Designed around <strong>your vision</strong>, not a template.
-</div>
-
-
-<ul
-class="package-list"
-id="pkg3List"
->
-
-<li data-i18n="pkg3item1">
-Custom interactive event website
-</li>
-
-<li data-i18n="pkg3item2">
-Digital invitation — unlimited guests
-</li>
-
-<li data-i18n="pkg3item3">
-Digital PDF backup
-</li>
-
-<li data-i18n="pkg3item4">
-10+ photos gallery
-</li>
-
-<li data-i18n="pkg3item5">
-Automatic music experience
-</li>
-
-<li data-i18n="pkg3item6">
-Countdown
-</li>
-
-<li data-i18n="pkg3item7">
-Your Story / About the Event
-</li>
-
-<li data-i18n="pkg3item8">
-Special Guests / Event Hosts
-</li>
-
-<li data-i18n="pkg3item9">
-Event Timeline
-</li>
-
-<li data-i18n="pkg3item10">
-Accommodations / hotel suggestions
-</li>
-
-<li data-i18n="pkg3item11">
-Multiple RSVP options
-</li>
-
-<li data-i18n="pkg3item12">
-RSVP responses via Google Sheets
-</li>
-
-<li data-i18n="pkg3item13">
-Add to Calendar
-</li>
-
-<li data-i18n="pkg3item14">
-Maps / Directions
-</li>
-
-<li data-i18n="pkg3item15">
-Dress Code
-</li>
-
-<li data-i18n="pkg3item16">
-Registry / Gifts
-</li>
-
-<li data-i18n="pkg3item17">
-Details to Keep in Mind
-</li>
-
-<li data-i18n="pkg3item18">
-QR Photo Sharing
-</li>
-
-<li data-i18n="pkg3item19">
-25 Personalized Digital Guest Covers — PDF
-</li>
-
-<li data-i18n="pkg3item20">
-Fully Personalized Design
-</li>
-
-<li data-i18n="pkg3item21">
-2 Rounds of Changes
-</li>
-
-</ul>
-
-
-<button
-class="package-toggle"
-type="button"
-data-package-toggle="3"
-aria-expanded="false"
->
-
-<span
-class="toggle-text"
-data-i18n="showMore"
->
-Show more
-</span>
-
-<span class="toggle-arrow">
-⌄
-</span>
-
-</button>
 
 
 <p
-class="package-note"
-data-i18n="pkg3Note"
+data-i18n="experience1Copy"
 >
-Additional Personalized Digital Guest Covers available
-for an additional fee — custom quote based on quantity.
+Every detail is designed to feel intentional,
+elegant and connected to your wedding style.
 </p>
 
-</article>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================================
-     HOW IT WORKS
-========================================================= -->
-
-<section
-class="section section-soft"
-id="how"
->
-
-<div class="container">
-
-
-<div class="section-head">
-
-<div
-class="section-kicker"
-data-i18n="howKicker"
->
-How It Works
 </div>
 
 
-<h2
-data-i18n="howTitle"
+
+<div class="experience-card">
+
+
+<div class="experience-icon">
+📱
+</div>
+
+
+<h3
+data-i18n="experience2Title"
 >
-Simple from idea to invitation.
-</h2>
+Made for Mobile
+</h3>
 
 
 <p
-data-i18n="howCopy"
+data-i18n="experience2Copy"
 >
-We handle the design and digital experience
-so you can focus on celebrating.
+Your guests can open, explore and share
+your invitation directly from their phones.
 </p>
 
 </div>
 
 
 
-<div class="steps">
+<div class="experience-card">
 
 
-<div class="step">
-
-<div class="step-num">
-1
+<div class="experience-icon">
+✨
 </div>
 
-<h3 data-i18n="step1Title">
-Choose
+
+<h3
+data-i18n="experience3Title"
+>
+Designed Around You
 </h3>
 
-<p data-i18n="step1Copy">
-Select your package and event type.
-</p>
 
-</div>
-
-
-
-<div class="step">
-
-<div class="step-num">
-2
-</div>
-
-<h3 data-i18n="step2Title">
-Share
-</h3>
-
-<p data-i18n="step2Copy">
-Send us your details, photos, text and links.
-</p>
-
-</div>
-
-
-
-<div class="step">
-
-<div class="step-num">
-3
-</div>
-
-<h3 data-i18n="step3Title">
-Design
-</h3>
-
-<p data-i18n="step3Copy">
-We create your invitation around your style.
-</p>
-
-</div>
-
-
-
-<div class="step">
-
-<div class="step-num">
-4
-</div>
-
-<h3 data-i18n="step4Title">
-Celebrate
-</h3>
-
-<p data-i18n="step4Copy">
-Share your invitation and enjoy the moment.
+<p
+data-i18n="experience3Copy"
+>
+From elegant details to completely custom ideas,
+your invitation can reflect your story.
 </p>
 
 </div>
@@ -2481,226 +2710,11 @@ Share your invitation and enjoy the moment.
 
 
 <!-- =========================================================
-     ABOUT
+     CTA
 ========================================================= -->
 
 <section
 class="section"
-id="about"
->
-
-<div class="container about">
-
-
-<div class="about-card">
-
-<img
-src="assets/logo/boreal-icon-gradient-transparent.png"
-alt="Boreal"
->
-
-</div>
-
-
-<div class="about-copy">
-
-<div
-class="section-kicker"
-data-i18n="aboutKicker"
->
-About Boreal
-</div>
-
-
-<h2
-data-i18n-html="aboutTitle"
->
-Your celebration.
-Your vision.
-Your invitation.
-</h2>
-
-
-<p
-data-i18n="aboutCopy"
->
-Boreal Digital Design creates digital invitations
-with a balance of beautiful design, thoughtful details
-and easy-to-share experiences.
-</p>
-
-
-<div class="about-list">
-
-<div data-i18n="aboutItem1">
-✨ Designed around your event
-</div>
-
-<div data-i18n="aboutItem2">
-📱 Made to look beautiful on mobile
-</div>
-
-<div data-i18n="aboutItem3">
-💌 Easy to share with your guests
-</div>
-
-<div data-i18n="aboutItem4">
-🎨 Custom when your vision calls for it
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================================
-     FAQ
-========================================================= -->
-
-<section
-class="section section-soft"
-id="faq"
->
-
-<div class="container">
-
-
-<div class="section-head">
-
-<div class="section-kicker">
-FAQ
-</div>
-
-<h2
-data-i18n="faqTitle"
->
-A few things to know.
-</h2>
-
-</div>
-
-
-
-<div class="faq">
-
-
-<details>
-
-<summary data-i18n="faq1Q">
-How long does my invitation website stay online?
-</summary>
-
-<p data-i18n="faq1A">
-For Signature and Premium, the digital invitation website
-remains active through the day of your event. After the event,
-the website is taken offline to help protect your personal
-event information and privacy.
-</p>
-
-</details>
-
-
-
-<details>
-
-<summary data-i18n="faq2Q">
-Do I receive a backup?
-</summary>
-
-<p data-i18n="faq2A">
-Signature and Premium include a digital PDF backup so you
-can keep a copy of your invitation for your personal records.
-</p>
-
-</details>
-
-
-
-<details>
-
-<summary data-i18n="faq3Q">
-Is printing included?
-</summary>
-
-<p data-i18n="faq3A">
-No. Printing is not included in any package.
-Digital files are delivered so you can print with the
-provider of your choice.
-</p>
-
-</details>
-
-
-
-<details>
-
-<summary data-i18n="faq4Q">
-What counts as a round of changes?
-</summary>
-
-<p data-i18n="faq4A">
-One round means one consolidated list of changes submitted
-at the same time. Essential includes one round;
-Signature and Premium include two rounds.
-</p>
-
-</details>
-
-
-
-<details>
-
-<summary data-i18n="faq5Q">
-Can Premium Custom be designed from my own idea?
-</summary>
-
-<p data-i18n="faq5A">
-Yes. Premium Custom is our fully personalized option.
-You can share inspiration, a reference image, a special
-background, colors or other design ideas and we build
-the experience around your vision.
-</p>
-
-</details>
-
-
-
-<details>
-
-<summary data-i18n="faq6Q">
-What information do I need to provide?
-</summary>
-
-<p data-i18n="faq6A">
-The client provides the event details, photos, text,
-links and other information needed for the invitation.
-Boreal is not responsible for errors caused by incorrect
-information supplied by the client.
-</p>
-
-</details>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================================
-     CONTACT
-========================================================= -->
-
-<section
-class="section"
-id="contact"
 >
 
 <div class="container">
@@ -2711,27 +2725,29 @@ id="contact"
 
 <div>
 
+
 <div
 class="section-kicker"
 style="color:#bca8ff;"
 data-i18n="contactKicker"
 >
-Let's create something beautiful.
+Ready to create yours?
 </div>
 
 
 <h2
 data-i18n="contactTitle"
 >
-Tell us what you envision.
+Let's design your love story.
 </h2>
 
 
 <p
 data-i18n="contactCopy"
 >
-From a simple printable invitation to a fully custom
-digital experience, we design around your event.
+Choose a wedding design or tell us what you envision.
+From elegant essentials to a completely custom
+digital experience, we create around your celebration.
 </p>
 
 </div>
@@ -2739,7 +2755,7 @@ digital experience, we design around your event.
 
 <a
 class="btn btn-primary"
-href="#packages"
+href="../#packages"
 data-i18n="contactBtn"
 >
 Explore Packages →
@@ -2771,52 +2787,61 @@ Explore Packages →
 
 <div class="footer-brand">
 
+
 <img
-src="assets/logo/boreal-icon-gradient-transparent.png"
+src="../assets/logo/boreal-icon-gradient-transparent.png"
 alt="Boreal"
 >
+
 
 <span>
 Boreal Digital Design
 </span>
 
+
 </div>
+
 
 
 <div class="footer-links">
 
+
 <a
-href="#events"
+href="../#events"
 data-i18n="footerEvents"
 >
 Events
 </a>
 
+
 <a
-href="#packages"
+href="../#packages"
 data-i18n="footerPackages"
 >
 Packages
 </a>
 
+
 <a
-href="#faq"
+href="../#faq"
 data-i18n="footerFaq"
 >
 FAQ
 </a>
 
+
 <a
-href="#contact"
+href="../#contact"
 data-i18n="footerContact"
 >
 Contact
 </a>
 
-</div>
-
 
 </div>
+
+</div>
+
 
 
 <div
@@ -2843,135 +2868,13 @@ Printing is not included.
 ========================================================= */
 
 let market = "US";
+
 let language = "en";
 
 
 
 /* =========================================================
-   PACKAGE DATA
-========================================================= */
-
-const packages = {
-
-
-US:{
-
-en:[
-
-{
-name:"ESSENTIAL",
-price:"$15",
-oldPrice:"",
-tag:"Digital Printable Invitation"
-},
-
-{
-name:"SIGNATURE",
-price:"$75",
-oldPrice:"$95",
-tag:"Interactive Digital Invitation"
-},
-
-{
-name:"PREMIUM CUSTOM",
-price:"$125",
-oldPrice:"$165",
-tag:"Custom Interactive Experience"
-}
-
-],
-
-
-es:[
-
-{
-name:"ESSENTIAL",
-price:"$15",
-oldPrice:"",
-tag:"Invitación digital imprimible"
-},
-
-{
-name:"SIGNATURE",
-price:"$75",
-oldPrice:"$95",
-tag:"Invitación digital interactiva"
-},
-
-{
-name:"PREMIUM CUSTOM",
-price:"$125",
-oldPrice:"$165",
-tag:"Experiencia interactiva personalizada"
-}
-
-]
-
-},
-
-
-
-MX:{
-
-en:[
-
-{
-name:"BOREAL",
-price:"$250",
-oldPrice:"",
-tag:"Digital Printable Invitation"
-},
-
-{
-name:"SIGNATURE",
-price:"$950",
-oldPrice:"$1,550",
-tag:"Interactive Digital Invitation"
-},
-
-{
-name:"PREMIUM CUSTOM",
-price:"$1,950",
-oldPrice:"$2,550",
-tag:"Custom Interactive Experience"
-}
-
-],
-
-
-es:[
-
-{
-name:"BOREAL",
-price:"$250",
-oldPrice:"",
-tag:"Invitación digital imprimible"
-},
-
-{
-name:"SIGNATURE",
-price:"$950",
-oldPrice:"$1,550",
-tag:"Invitación digital interactiva"
-},
-
-{
-name:"PREMIUM CUSTOM",
-price:"$1,950",
-oldPrice:"$2,550",
-tag:"Experiencia interactiva personalizada"
-}
-
-]
-
-}
-
-};
-
-
-
-/* =========================================================
-   FULL PAGE TRANSLATIONS
+   TRANSLATIONS
 ========================================================= */
 
 const translations = {
@@ -2987,178 +2890,113 @@ navFaq:"FAQ",
 navContact:"Contact",
 
 
-heroEyebrow:"Digital Invitations",
+heroEyebrow:"Wedding Invitations",
 
-heroTitle:"Beautifully <em>designed</em><br>for every celebration.",
+heroTitle:"Your love story,<br><em>beautifully invited.</em>",
 
-heroCopy:"From elegant essentials to completely custom experiences, we create digital invitations designed around your event, your style, and your vision.",
+heroCopy:"Elegant digital wedding invitations created to reflect your story, your style and the feeling you want your guests to experience from the very first moment.",
 
-heroBtn1:"Explore Invitations →",
+heroBtn1:"Explore Wedding Collection →",
+
 heroBtn2:"View Packages →",
 
 
-eventsKicker:"Event Categories",
+featuredKicker:"Featured Wedding",
 
-eventsTitle:"Invitations for every celebration.",
+featuredTitle:"Meet Emily & James.",
 
-eventsCopy:"Whether it is a wedding, milestone, shower or corporate gathering, we design the invitation around the moment.",
+featuredIntro:"A glimpse into what a beautifully designed digital wedding experience can look like.",
 
+featuredBadge:"✦ Premium Custom Sample",
 
-eventWeddingTitle:"Weddings",
-eventWeddingCopy:"Romantic, elegant and completely yours.",
+featuredSubtitle:"A romantic digital wedding experience.",
 
-eventBirthdayTitle:"Birthdays & Celebrations",
-eventBirthdayCopy:"Make every milestone worth sharing.",
-
-eventBabyTitle:"Baby Showers",
-eventBabyCopy:"Sweet details for a little one on the way.",
-
-eventQuinceTitle:"Quinceañeras",
-eventQuinceCopy:"A celebration designed around her moment.",
-
-eventGraduationTitle:"Graduations",
-eventGraduationCopy:"Celebrate new beginnings in style.",
-
-eventCorporateTitle:"Corporate Events",
-eventCorporateCopy:"Professional invitations that make an impression.",
-
-eventView:"View collection →",
+featuredCopy:"Designed as a complete digital experience, this wedding invitation brings together elegant visuals, thoughtful details and interactive features in one beautiful place.",
 
 
-packagesKicker:"Our Packages",
+detail1Title:"Style",
 
-packagesTitle:"Choose the experience that fits your event.",
+detail1Text:"Elegant & romantic",
 
-packagesCopy:"Three clear options, from a beautiful printable invitation to a fully custom interactive experience.",
+detail2Title:"Experience",
 
-marketNote:"🌎 Prices update automatically for your selected market.",
+detail2Text:"Interactive website",
 
-mostPersonalized:"Most Personalized",
+detail3Title:"Perfect For",
 
-premiumMessage:"✨ Designed around <strong>your vision</strong>, not a template.",
+detail3Text:"Modern weddings",
 
-showMore:"Show more",
-showLess:"Show less",
+detail4Title:"Customization",
 
-
-pkg1item1:"High-resolution PNG",
-pkg1item2:"Standard invitation size",
-pkg1item3:"Personalized with your event details",
-pkg1item4:"Digital delivery",
-pkg1item5:"1 round of changes",
-
-pkg1Note:"Printing is not included. Print at the printer of your choice.",
+detail4Text:"Fully personalized",
 
 
-pkg2item1:"Interactive digital invitation website",
-pkg2item2:"Digital PDF backup",
-pkg2item3:"Your 5 favorite photos",
-pkg2item4:"Event details + map",
-pkg2item5:"Celebration details + map",
-pkg2item6:"Add to calendar",
-pkg2item7:"RSVP / Contact button",
-pkg2item8:"Optional background music",
-pkg2item9:"Dress code",
-pkg2item10:"Registry / Gifts",
-pkg2item11:"Details to keep in mind",
-pkg2item12:"2 rounds of changes",
+featuredBtn:"View Emily & James →",
 
 
-pkg3item1:"Custom interactive event website",
-pkg3item2:"Digital invitation — unlimited guests",
-pkg3item3:"Digital PDF backup",
-pkg3item4:"10+ photos gallery",
-pkg3item5:"Automatic music experience",
-pkg3item6:"Countdown",
-pkg3item7:"Your Story / About the Event",
-pkg3item8:"Special Guests / Event Hosts",
-pkg3item9:"Event Timeline",
-pkg3item10:"Accommodations / hotel suggestions",
-pkg3item11:"Multiple RSVP options",
-pkg3item12:"RSVP responses via Google Sheets",
-pkg3item13:"Add to Calendar",
-pkg3item14:"Maps / Directions",
-pkg3item15:"Dress Code",
-pkg3item16:"Registry / Gifts",
-pkg3item17:"Details to Keep in Mind",
-pkg3item18:"QR Photo Sharing",
-pkg3item19:"25 Personalized Digital Guest Covers — PDF",
-pkg3item20:"Fully Personalized Design",
-pkg3item21:"2 Rounds of Changes",
+collectionKicker:"Wedding Collection",
 
-pkg3Note:"Additional Personalized Digital Guest Covers available for an additional fee — custom quote based on quantity.",
+collectionTitle:"Find the style that feels like you.",
+
+collectionCopy:"Explore our wedding designs and discover the invitation that feels right for your celebration.",
+
+collectionEmilyCopy:"Romantic, elegant and timeless.",
+
+collectionView:"View invitation →",
 
 
-howKicker:"How It Works",
+comingSoonTitle:"Coming Soon",
 
-howTitle:"Simple from idea to invitation.",
+comingSoonText:"New wedding design",
 
-howCopy:"We handle the design and digital experience so you can focus on celebrating.",
+collectionComingTitle1:"Romantic",
 
-step1Title:"Choose",
-step1Copy:"Select your package and event type.",
+collectionComingCopy1:"A new love story is coming soon.",
 
-step2Title:"Share",
-step2Copy:"Send us your details, photos, text and links.",
+collectionComingTitle2:"Modern",
 
-step3Title:"Design",
-step3Copy:"We create your invitation around your style.",
+collectionComingCopy2:"A fresh contemporary wedding style.",
 
-step4Title:"Celebrate",
-step4Copy:"Share your invitation and enjoy the moment.",
+comingSoonLabel:"Coming soon",
 
 
-aboutKicker:"About Boreal",
+experienceKicker:"The Boreal Experience",
 
-aboutTitle:"Your celebration.<br>Your vision.<br>Your invitation.",
+experienceTitle:"More than an invitation.",
 
-aboutCopy:"Boreal Digital Design creates digital invitations with a balance of beautiful design, thoughtful details and easy-to-share experiences.",
-
-aboutItem1:"✨ Designed around your event",
-aboutItem2:"📱 Made to look beautiful on mobile",
-aboutItem3:"💌 Easy to share with your guests",
-aboutItem4:"🎨 Custom when your vision calls for it",
+experienceCopy:"Your wedding invitation can become the place where your guests discover every important detail about your celebration.",
 
 
-faqTitle:"A few things to know.",
+experience1Title:"Beautifully Designed",
 
-faq1Q:"How long does my invitation website stay online?",
-
-faq1A:"For Signature and Premium, the digital invitation website remains active through the day of your event. After the event, the website is taken offline to help protect your personal event information and privacy.",
-
-faq2Q:"Do I receive a backup?",
-
-faq2A:"Signature and Premium include a digital PDF backup so you can keep a copy of your invitation for your personal records.",
-
-faq3Q:"Is printing included?",
-
-faq3A:"No. Printing is not included in any package. Digital files are delivered so you can print with the provider of your choice.",
-
-faq4Q:"What counts as a round of changes?",
-
-faq4A:"One round means one consolidated list of changes submitted at the same time. Essential includes one round; Signature and Premium include two rounds.",
-
-faq5Q:"Can Premium Custom be designed from my own idea?",
-
-faq5A:"Yes. Premium Custom is our fully personalized option. You can share inspiration, a reference image, a special background, colors or other design ideas and we build the experience around your vision.",
-
-faq6Q:"What information do I need to provide?",
-
-faq6A:"The client provides the event details, photos, text, links and other information needed for the invitation. Boreal is not responsible for errors caused by incorrect information supplied by the client.",
+experience1Copy:"Every detail is designed to feel intentional, elegant and connected to your wedding style.",
 
 
-contactKicker:"Let's create something beautiful.",
+experience2Title:"Made for Mobile",
 
-contactTitle:"Tell us what you envision.",
+experience2Copy:"Your guests can open, explore and share your invitation directly from their phones.",
 
-contactCopy:"From a simple printable invitation to a fully custom digital experience, we design around your event.",
+
+experience3Title:"Designed Around You",
+
+experience3Copy:"From elegant details to completely custom ideas, your invitation can reflect your story.",
+
+
+contactKicker:"Ready to create yours?",
+
+contactTitle:"Let's design your love story.",
+
+contactCopy:"Choose a wedding design or tell us what you envision. From elegant essentials to a completely custom digital experience, we create around your celebration.",
 
 contactBtn:"Explore Packages →",
 
 
 footerEvents:"Events",
+
 footerPackages:"Packages",
+
 footerFaq:"FAQ",
+
 footerContact:"Contact",
 
 footerCopyright:"© 2026 Boreal Digital Design. Digital products and services only. Printing is not included."
@@ -3170,185 +3008,125 @@ footerCopyright:"© 2026 Boreal Digital Design. Digital products and services on
 es:{
 
 navEvents:"Eventos",
+
 navPackages:"Paquetes",
+
 navHow:"Cómo funciona",
+
 navAbout:"Nosotros",
+
 navFaq:"Preguntas frecuentes",
+
 navContact:"Contacto",
 
 
-heroEyebrow:"Invitaciones Digitales",
+heroEyebrow:"Invitaciones de Boda",
 
-heroTitle:"Diseñadas <em>con belleza</em><br>para cada celebración.",
+heroTitle:"Tu historia de amor,<br><em>bellamente invitada.</em>",
 
-heroCopy:"Desde invitaciones elegantes y sencillas hasta experiencias completamente personalizadas, creamos invitaciones digitales pensadas para tu evento, tu estilo y tu visión.",
+heroCopy:"Invitaciones digitales de boda elegantes creadas para reflejar tu historia, tu estilo y la experiencia que quieres que tus invitados vivan desde el primer momento.",
 
-heroBtn1:"Explorar Invitaciones →",
+heroBtn1:"Explorar Colección de Bodas →",
+
 heroBtn2:"Ver Paquetes →",
 
 
-eventsKicker:"Categorías de Eventos",
+featuredKicker:"Boda Destacada",
 
-eventsTitle:"Invitaciones para cada celebración.",
+featuredTitle:"Conoce a Emily & James.",
 
-eventsCopy:"Ya sea una boda, cumpleaños, baby shower, quinceañera, graduación o evento corporativo, diseñamos la invitación alrededor de cada momento.",
+featuredIntro:"Una muestra de lo que puede ser una experiencia digital de boda cuidadosamente diseñada.",
 
+featuredBadge:"✦ Muestra Premium Custom",
 
-eventWeddingTitle:"Bodas",
-eventWeddingCopy:"Románticas, elegantes y completamente tuyas.",
+featuredSubtitle:"Una experiencia digital de boda romántica.",
 
-eventBirthdayTitle:"Cumpleaños y Celebraciones",
-eventBirthdayCopy:"Haz que cada momento especial sea digno de compartir.",
-
-eventBabyTitle:"Baby Showers",
-eventBabyCopy:"Detalles dulces para celebrar la llegada de un pequeño.",
-
-eventQuinceTitle:"Quinceañeras",
-eventQuinceCopy:"Una celebración diseñada alrededor de su gran momento.",
-
-eventGraduationTitle:"Graduaciones",
-eventGraduationCopy:"Celebra nuevos comienzos con estilo.",
-
-eventCorporateTitle:"Eventos Corporativos",
-eventCorporateCopy:"Invitaciones profesionales que dejan una gran impresión.",
-
-eventView:"Ver colección →",
+featuredCopy:"Diseñada como una experiencia digital completa, esta invitación reúne elementos visuales elegantes, detalles cuidadosamente pensados y funciones interactivas en un solo lugar.",
 
 
-packagesKicker:"Nuestros Paquetes",
+detail1Title:"Estilo",
 
-packagesTitle:"Elige la experiencia ideal para tu evento.",
+detail1Text:"Elegante y romántico",
 
-packagesCopy:"Tres opciones claras, desde una hermosa invitación imprimible hasta una experiencia interactiva completamente personalizada.",
+detail2Title:"Experiencia",
 
-marketNote:"🌎 Los precios se actualizan automáticamente según el mercado seleccionado.",
+detail2Text:"Sitio web interactivo",
 
-mostPersonalized:"Más Personalizado",
+detail3Title:"Ideal Para",
 
-premiumMessage:"✨ Diseñado alrededor de <strong>tu visión</strong>, no de una plantilla.",
+detail3Text:"Bodas modernas",
 
-showMore:"Ver más",
-showLess:"Ver menos",
+detail4Title:"Personalización",
 
-
-pkg1item1:"PNG en alta resolución",
-pkg1item2:"Tamaño estándar de invitación",
-pkg1item3:"Personalizada con los datos de tu evento",
-pkg1item4:"Entrega digital",
-pkg1item5:"1 ronda de cambios",
-
-pkg1Note:"La impresión no está incluida. Imprime con el proveedor de tu elección.",
+detail4Text:"Completamente personalizada",
 
 
-pkg2item1:"Sitio web de invitación digital interactiva",
-pkg2item2:"Respaldo digital en PDF",
-pkg2item3:"Tus 5 fotos favoritas",
-pkg2item4:"Detalles del evento + mapa",
-pkg2item5:"Detalles de la celebración + mapa",
-pkg2item6:"Agregar al calendario",
-pkg2item7:"Botón de RSVP / Contacto",
-pkg2item8:"Música de fondo opcional",
-pkg2item9:"Código de vestimenta",
-pkg2item10:"Mesa de regalos",
-pkg2item11:"Detalles a tener en cuenta",
-pkg2item12:"2 rondas de cambios",
+featuredBtn:"Ver Emily & James →",
 
 
-pkg3item1:"Sitio web de evento interactivo personalizado",
-pkg3item2:"Invitación digital — invitados ilimitados",
-pkg3item3:"Respaldo digital en PDF",
-pkg3item4:"Galería de 10+ fotos",
-pkg3item5:"Experiencia musical automática",
-pkg3item6:"Cuenta regresiva",
-pkg3item7:"Tu Historia / Sobre el Evento",
-pkg3item8:"Invitados Especiales / Anfitriones",
-pkg3item9:"Cronograma del Evento",
-pkg3item10:"Alojamiento / sugerencias de hoteles",
-pkg3item11:"Múltiples opciones de RSVP",
-pkg3item12:"Respuestas RSVP mediante Google Sheets",
-pkg3item13:"Agregar al Calendario",
-pkg3item14:"Mapas / Indicaciones",
-pkg3item15:"Código de Vestimenta",
-pkg3item16:"Mesa de Regalos",
-pkg3item17:"Detalles a Tener en Cuenta",
-pkg3item18:"Compartir Fotos mediante QR",
-pkg3item19:"25 Portadas Digitales Personalizadas para Invitados — PDF",
-pkg3item20:"Diseño Completamente Personalizado",
-pkg3item21:"2 Rondas de Cambios",
+collectionKicker:"Colección de Bodas",
 
-pkg3Note:"Portadas Digitales Personalizadas adicionales disponibles por un costo extra — cotización personalizada según la cantidad.",
+collectionTitle:"Encuentra el estilo que se sienta como tú.",
+
+collectionCopy:"Explora nuestros diseños de boda y descubre la invitación que se sienta perfecta para tu celebración.",
+
+collectionEmilyCopy:"Romántica, elegante y atemporal.",
+
+collectionView:"Ver invitación →",
 
 
-howKicker:"Cómo Funciona",
+comingSoonTitle:"Próximamente",
 
-howTitle:"Simple, desde la idea hasta la invitación.",
+comingSoonText:"Nuevo diseño de boda",
 
-howCopy:"Nosotros nos encargamos del diseño y la experiencia digital para que tú puedas concentrarte en celebrar.",
+collectionComingTitle1:"Romántico",
 
-step1Title:"Elige",
-step1Copy:"Selecciona tu paquete y tipo de evento.",
+collectionComingCopy1:"Una nueva historia de amor llegará pronto.",
 
-step2Title:"Comparte",
-step2Copy:"Envíanos tus datos, fotos, textos y enlaces.",
+collectionComingTitle2:"Moderno",
 
-step3Title:"Diseñamos",
-step3Copy:"Creamos tu invitación alrededor de tu estilo.",
+collectionComingCopy2:"Un nuevo estilo contemporáneo para bodas.",
 
-step4Title:"Celebra",
-step4Copy:"Comparte tu invitación y disfruta el momento.",
+comingSoonLabel:"Próximamente",
 
 
-aboutKicker:"Sobre Boreal",
+experienceKicker:"La Experiencia Boreal",
 
-aboutTitle:"Tu celebración.<br>Tu visión.<br>Tu invitación.",
+experienceTitle:"Más que una invitación.",
 
-aboutCopy:"Boreal Digital Design crea invitaciones digitales combinando un diseño hermoso, detalles pensados cuidadosamente y experiencias fáciles de compartir.",
-
-aboutItem1:"✨ Diseñadas alrededor de tu evento",
-aboutItem2:"📱 Diseñadas para lucir increíbles en celular",
-aboutItem3:"💌 Fáciles de compartir con tus invitados",
-aboutItem4:"🎨 Personalizadas cuando tu visión lo requiere",
+experienceCopy:"Tu invitación de boda puede convertirse en el lugar donde tus invitados descubran todos los detalles importantes de tu celebración.",
 
 
-faqTitle:"Algunas cosas que debes saber.",
+experience1Title:"Diseño Hermoso",
 
-faq1Q:"¿Cuánto tiempo permanece activa mi invitación?",
-
-faq1A:"Para Signature y Premium, el sitio web de la invitación digital permanece activo hasta el día de tu evento. Después del evento, el sitio se desactiva para ayudar a proteger la información personal de tu evento y tu privacidad.",
-
-faq2Q:"¿Recibo un respaldo?",
-
-faq2A:"Signature y Premium incluyen un respaldo digital en PDF para que puedas conservar una copia de tu invitación para tus archivos personales.",
-
-faq3Q:"¿La impresión está incluida?",
-
-faq3A:"No. La impresión no está incluida en ningún paquete. Los archivos digitales se entregan para que puedas imprimirlos con el proveedor de tu elección.",
-
-faq4Q:"¿Qué cuenta como una ronda de cambios?",
-
-faq4A:"Una ronda significa una lista consolidada de cambios enviada al mismo tiempo. Essential incluye una ronda; Signature y Premium incluyen dos rondas.",
-
-faq5Q:"¿Premium Custom puede diseñarse a partir de mi propia idea?",
-
-faq5A:"Sí. Premium Custom es nuestra opción completamente personalizada. Puedes compartir inspiración, una imagen de referencia, un fondo especial, colores u otras ideas de diseño y nosotros creamos la experiencia alrededor de tu visión.",
-
-faq6Q:"¿Qué información necesito proporcionar?",
-
-faq6A:"El cliente proporciona los datos del evento, fotografías, textos, enlaces y demás información necesaria para la invitación. Boreal no se hace responsable de errores ocasionados por información incorrecta proporcionada por el cliente.",
+experience1Copy:"Cada detalle está diseñado para sentirse intencional, elegante y conectado con el estilo de tu boda.",
 
 
-contactKicker:"Creemos algo hermoso juntos.",
+experience2Title:"Diseñada para Celular",
 
-contactTitle:"Cuéntanos lo que imaginas.",
+experience2Copy:"Tus invitados pueden abrir, explorar y compartir tu invitación directamente desde su celular.",
 
-contactCopy:"Desde una sencilla invitación imprimible hasta una experiencia digital completamente personalizada, diseñamos alrededor de tu evento.",
+
+experience3Title:"Diseñada para Ti",
+
+experience3Copy:"Desde detalles elegantes hasta ideas completamente personalizadas, tu invitación puede reflejar tu historia.",
+
+
+contactKicker:"¿Lista para crear la tuya?",
+
+contactTitle:"Diseñemos tu historia de amor.",
+
+contactCopy:"Elige un diseño de boda o cuéntanos lo que imaginas. Desde opciones elegantes y sencillas hasta una experiencia digital completamente personalizada, creamos alrededor de tu celebración.",
 
 contactBtn:"Explorar Paquetes →",
 
 
 footerEvents:"Eventos",
+
 footerPackages:"Paquetes",
+
 footerFaq:"Preguntas frecuentes",
+
 footerContact:"Contacto",
 
 footerCopyright:"© 2026 Boreal Digital Design. Solo productos y servicios digitales. La impresión no está incluida."
@@ -3360,12 +3138,13 @@ footerCopyright:"© 2026 Boreal Digital Design. Solo productos y servicios digit
 
 
 /* =========================================================
-   UPDATE ALL PAGE TEXT
+   UPDATE LANGUAGE
 ========================================================= */
 
 function updateLanguage(){
 
-const t = translations[language];
+const t =
+translations[language];
 
 
 /* Regular text */
@@ -3374,11 +3153,14 @@ document
 .querySelectorAll("[data-i18n]")
 .forEach(element=>{
 
-const key = element.dataset.i18n;
+const key =
+element.dataset.i18n;
+
 
 if(t[key] !== undefined){
 
-element.innerHTML = t[key];
+element.innerHTML =
+t[key];
 
 }
 
@@ -3391,143 +3173,26 @@ document
 .querySelectorAll("[data-i18n-html]")
 .forEach(element=>{
 
-const key = element.dataset.i18nHtml;
+const key =
+element.dataset.i18nHtml;
+
 
 if(t[key] !== undefined){
 
-element.innerHTML = t[key];
+element.innerHTML =
+t[key];
 
 }
 
 });
-
-
-/* Package names + tags */
-
-updatePackages();
 
 
 /* HTML language */
 
-document.documentElement.lang = language;
+document.documentElement.lang =
+language;
 
 }
-
-
-
-/* =========================================================
-   UPDATE PACKAGES
-========================================================= */
-
-function updatePackages(){
-
-const list = packages[market][language];
-
-
-list.forEach((pkg,index)=>{
-
-const number = index + 1;
-
-
-/* Package name */
-
-document.getElementById(
-"pkg"+number+"Name"
-).textContent = pkg.name;
-
-
-/* Price */
-
-const priceElement =
-document.getElementById(
-"pkg"+number+"Price"
-);
-
-
-const currency =
-market === "US"
-? "USD"
-: "MXN";
-
-
-if(pkg.oldPrice){
-
-priceElement.innerHTML =
-'<span class="price-old">' +
-pkg.oldPrice +
-'</span>' +
-
-'<span class="price-current">' +
-pkg.price +
-'</span>' +
-
-'<small>' +
-currency +
-'</small>';
-
-}else{
-
-priceElement.innerHTML =
-'<span class="price-current">' +
-pkg.price +
-'</span>' +
-
-'<small>' +
-currency +
-'</small>';
-
-}
-
-
-/* Package description */
-
-document.getElementById(
-"pkg"+number+"Tag"
-).textContent = pkg.tag;
-
-});
-
-}
-
-
-
-/* =========================================================
-   PACKAGE SHOW MORE / SHOW LESS
-========================================================= */
-
-document
-.querySelectorAll(".package-toggle")
-.forEach(button=>{
-
-button.addEventListener("click",()=>{
-
-const packageCard =
-button.closest(".package");
-
-const isExpanded =
-packageCard.classList.toggle("expanded");
-
-button.setAttribute(
-"aria-expanded",
-isExpanded
-);
-
-
-const textElement =
-button.querySelector(".toggle-text");
-
-
-const t = translations[language];
-
-
-textElement.textContent =
-isExpanded
-? t.showLess
-: t.showMore;
-
-});
-
-});
 
 
 
@@ -3539,22 +3204,24 @@ document
 .querySelectorAll(".market")
 .forEach(button=>{
 
-button.addEventListener("click",()=>{
+button.addEventListener(
+"click",
+()=>{
 
-market = button.dataset.market;
+market =
+button.dataset.market;
 
 
 document
 .querySelectorAll(".market")
 .forEach(btn=>{
+
 btn.classList.remove("active");
+
 });
 
 
 button.classList.add("active");
-
-
-updatePackages();
 
 });
 
@@ -3570,15 +3237,20 @@ document
 .querySelectorAll(".lang")
 .forEach(button=>{
 
-button.addEventListener("click",()=>{
+button.addEventListener(
+"click",
+()=>{
 
-language = button.dataset.lang;
+language =
+button.dataset.lang;
 
 
 document
 .querySelectorAll(".lang")
 .forEach(btn=>{
+
 btn.classList.remove("active");
+
 });
 
 
@@ -3599,7 +3271,9 @@ updateLanguage();
 
 document
 .getElementById("menuBtn")
-.addEventListener("click",()=>{
+.addEventListener(
+"click",
+()=>{
 
 document
 .getElementById("navLinks")
@@ -3611,25 +3285,24 @@ document
 
 
 /* =========================================================
-   CLOSE MOBILE MENU AFTER CLICK
+   CLOSE MOBILE MENU
 ========================================================= */
 
 document
 .querySelectorAll(".navlinks a")
 .forEach(link=>{
 
-link.addEventListener("click",()=>{
+link.addEventListener(
+"click",
+()=>{
 
 document
 .getElementById("navLinks")
 .classList
 .remove("open");
-
 });
 
 });
-
-
 
 /* =========================================================
    INITIALIZE
