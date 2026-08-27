@@ -459,16 +459,37 @@ h2{
   margin-top:8px;
 }
 
+/* ===== PRICE ===== */
+
 .price{
+  display:flex;
+  align-items:baseline;
+  gap:8px;
+  flex-wrap:wrap;
   font-size:38px;
   font-weight:950;
   color:var(--ink);
   margin:7px 0 3px;
 }
 
+.price-old{
+  font-size:20px;
+  font-weight:700;
+  color:#9aa5b7;
+  text-decoration:line-through;
+  text-decoration-thickness:2px;
+}
+
+.price-current{
+  font-size:38px;
+  font-weight:950;
+  color:var(--ink);
+}
+
 .price small{
   font-size:13px;
   color:var(--muted);
+  font-weight:700;
 }
 
 .package-tag{
@@ -798,11 +819,24 @@ footer{
     flex-direction:column;
     align-items:flex-start;
   }
+
+  .price{
+    gap:6px;
+  }
+
+  .price-old{
+    font-size:17px;
+  }
+
+  .price-current{
+    font-size:34px;
+  }
 }
 </style>
 </head>
 
 <body>
+
 <!-- =========================
      HEADER
 ========================= -->
@@ -1173,7 +1207,7 @@ to a fully custom interactive experience.
 <div class="packages-wrap">
 
 
-<!-- ESSENTIAL -->
+<!-- ESSENTIAL / BOREAL -->
 
 <article class="package">
 
@@ -1186,7 +1220,8 @@ ESSENTIAL
 </h3>
 
 <div class="price" id="pkg1Price">
-$15 <small>USD</small>
+<span class="price-current">$15</span>
+<small>USD</small>
 </div>
 
 <div class="package-tag" id="pkg1Tag">
@@ -1228,7 +1263,9 @@ SIGNATURE
 </h3>
 
 <div class="price" id="pkg2Price">
-$75 <small>USD</small>
+<span class="price-old">$95</span>
+<span class="price-current">$75</span>
+<small>USD</small>
 </div>
 
 <div class="package-tag" id="pkg2Tag">
@@ -1268,7 +1305,9 @@ PREMIUM CUSTOM
 </h3>
 
 <div class="price" id="pkg3Price">
-$125 <small>USD</small>
+<span class="price-old">$165</span>
+<span class="price-current">$125</span>
+<small>USD</small>
 </div>
 
 <div class="package-tag" id="pkg3Tag">
@@ -1714,16 +1753,19 @@ en:[
 {
 name:"ESSENTIAL",
 price:"$15",
+oldPrice:"",
 tag:"Digital Printable Invitation"
 },
 {
 name:"SIGNATURE",
 price:"$75",
+oldPrice:"$95",
 tag:"Interactive Wedding Invitation"
 },
 {
 name:"PREMIUM CUSTOM",
 price:"$125",
+oldPrice:"$165",
 tag:"Custom Interactive Wedding Experience"
 }
 ],
@@ -1732,16 +1774,19 @@ es:[
 {
 name:"ESSENTIAL",
 price:"$15",
+oldPrice:"",
 tag:"Invitación digital imprimible"
 },
 {
 name:"SIGNATURE",
 price:"$75",
+oldPrice:"$95",
 tag:"Invitación de boda interactiva"
 },
 {
 name:"PREMIUM CUSTOM",
 price:"$125",
+oldPrice:"$165",
 tag:"Experiencia de boda interactiva personalizada"
 }
 ]
@@ -1754,16 +1799,19 @@ en:[
 {
 name:"BOREAL",
 price:"$250",
+oldPrice:"",
 tag:"Digital Printable Invitation"
 },
 {
 name:"SIGNATURE",
-price:"$1,350",
+price:"$950",
+oldPrice:"$1,550",
 tag:"Interactive Digital Invitation"
 },
 {
 name:"PREMIUM CUSTOM",
-price:"$2,250",
+price:"$1,950",
+oldPrice:"$2,550",
 tag:"Custom Interactive Experience"
 }
 ],
@@ -1772,16 +1820,19 @@ es:[
 {
 name:"BOREAL",
 price:"$250",
+oldPrice:"",
 tag:"Invitación digital imprimible"
 },
 {
 name:"SIGNATURE",
-price:"$1,350",
+price:"$950",
+oldPrice:"$1,550",
 tag:"Invitación digital interactiva"
 },
 {
 name:"PREMIUM CUSTOM",
-price:"$2,250",
+price:"$1,950",
+oldPrice:"$2,550",
 tag:"Experiencia interactiva personalizada"
 }
 ]
@@ -1807,13 +1858,40 @@ document.getElementById(
 "pkg"+number+"Name"
 ).textContent=pkg.name;
 
-document.getElementById(
+
+/* =========================
+   UPDATE PRICE
+========================= */
+
+const priceElement=document.getElementById(
 "pkg"+number+"Price"
-).innerHTML=
+);
+
+if(pkg.oldPrice){
+
+priceElement.innerHTML=
+'<span class="price-old">'+
+pkg.oldPrice+
+'</span>'+
+'<span class="price-current">'+
 pkg.price+
-" <small>"+
+'</span>'+
+'<small>'+
 (market==="US"?"USD":"MXN")+
-"</small>";
+'</small>';
+
+}else{
+
+priceElement.innerHTML=
+'<span class="price-current">'+
+pkg.price+
+'</span>'+
+'<small>'+
+(market==="US"?"USD":"MXN")+
+'</small>';
+
+}
+
 
 document.getElementById(
 "pkg"+number+"Tag"
@@ -1823,6 +1901,10 @@ document.getElementById(
 
 }
 
+
+/* =========================
+   MARKET BUTTONS
+========================= */
 
 document.querySelectorAll(".market").forEach(button=>{
 
@@ -1843,6 +1925,10 @@ updatePackages();
 });
 
 
+/* =========================
+   LANGUAGE BUTTONS
+========================= */
+
 document.querySelectorAll(".lang").forEach(button=>{
 
 button.addEventListener("click",()=>{
@@ -1862,7 +1948,9 @@ updatePackages();
 });
 
 
-/* MOBILE MENU */
+/* =========================
+   MOBILE MENU
+========================= */
 
 document.getElementById("menuBtn")
 .addEventListener("click",()=>{
@@ -1889,6 +1977,10 @@ document
 
 });
 
+
+/* =========================
+   INITIALIZE
+========================= */
 
 updatePackages();
 
