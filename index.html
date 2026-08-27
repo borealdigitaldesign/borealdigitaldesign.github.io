@@ -445,26 +445,64 @@ h2{
   border-radius:24px;
   padding:30px 25px;
   box-shadow:0 10px 30px rgba(16,38,74,.05);
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
 }
+
+.package:hover{
+  transform:translateY(-4px);
+  box-shadow:0 18px 45px rgba(16,38,74,.09);
+}
+
+
+/* =========================================================
+   PREMIUM CUSTOM — HERO PACKAGE
+========================================================= */
 
 .package.featured-package{
+  position:relative;
   border:2px solid #8b66eb;
-  box-shadow:0 20px 55px rgba(111,82,219,.16);
-  transform:translateY(-8px);
+  box-shadow:
+    0 20px 55px rgba(111,82,219,.18),
+    0 0 0 5px rgba(139,102,235,.045);
+  transform:translateY(-10px);
+  background:
+    linear-gradient(180deg,rgba(250,248,255,.98),#fff 18%);
+  z-index:2;
 }
 
+.package.featured-package:hover{
+  transform:translateY(-13px);
+  box-shadow:
+    0 25px 65px rgba(111,82,219,.22),
+    0 0 0 6px rgba(139,102,235,.055);
+}
+
+
+/* =========================================================
+   PREMIUM BADGE
+========================================================= */
+
 .ribbon{
-  background:linear-gradient(90deg,#14c3d6,#8656e6);
+  background:linear-gradient(90deg,#14c3d6,#8656e6,#c85dbd);
   color:white;
   border-radius:999px;
-  padding:6px 10px;
+  padding:7px 12px;
   font-size:10px;
   font-weight:900;
   letter-spacing:.1em;
   text-transform:uppercase;
   display:inline-block;
   margin-bottom:12px;
+  box-shadow:0 7px 18px rgba(113,83,218,.18);
 }
+
+
+/* =========================================================
+   PACKAGE CONTENT
+========================================================= */
 
 .package .icon{
   font-size:28px;
@@ -475,6 +513,10 @@ h2{
   font-size:29px;
   color:var(--navy);
   margin-top:8px;
+}
+
+.package.featured-package h3{
+  font-size:31px;
 }
 
 .price{
@@ -502,6 +544,10 @@ h2{
   color:var(--ink);
 }
 
+.package.featured-package .price-current{
+  font-size:41px;
+}
+
 .price small{
   font-size:13px;
   color:var(--muted);
@@ -513,6 +559,37 @@ h2{
   font-size:13px;
   min-height:42px;
 }
+
+.package.featured-package .package-tag{
+  color:#5c4bb7;
+  font-weight:800;
+}
+
+
+/* =========================================================
+   PREMIUM SUPPORTING MESSAGE
+========================================================= */
+
+.premium-message{
+  margin:4px 0 13px;
+  padding:10px 12px;
+  border-radius:12px;
+  background:linear-gradient(90deg,#f0fcff,#f7f1ff);
+  border:1px solid #e6e3f7;
+  color:#5d5a78;
+  font-size:12px;
+  line-height:1.45;
+  font-weight:700;
+}
+
+.premium-message strong{
+  color:#5d4ec5;
+}
+
+
+/* =========================================================
+   PACKAGE LIST
+========================================================= */
 
 .package ul{
   list-style:none;
@@ -531,6 +608,10 @@ h2{
   color:#4c70dd;
   font-weight:900;
   margin-right:8px;
+}
+
+.package.featured-package li:before{
+  color:#7655df;
 }
 
 .details summary{
@@ -770,6 +851,7 @@ footer{
     justify-content:center;
   }
 
+
   /*
      EVENT CATEGORIES
      2 columns on tablet
@@ -780,17 +862,30 @@ footer{
     max-width:850px;
   }
 
+
+  /*
+     PACKAGES
+     Premium remains visually emphasized
+  */
+
   .packages-wrap{
     grid-template-columns:1fr;
   }
 
   .package.featured-package{
     transform:none;
+    order:-1;
   }
+
+  .package.featured-package:hover{
+    transform:translateY(-4px);
+  }
+
 
   .steps{
     grid-template-columns:repeat(2,1fr);
   }
+
 }
 
 
@@ -881,10 +976,9 @@ footer{
     padding:65px 0;
   }
 
+
   /*
      2 COLUMN MOBILE CATALOG
-     Much smaller cards so several
-     examples are visible at once.
   */
 
   .event-grid{
@@ -929,6 +1023,7 @@ footer{
     margin-top:8px;
   }
 
+
   .steps{
     grid-template-columns:1fr;
   }
@@ -962,6 +1057,10 @@ footer{
 
   .price-current{
     font-size:34px;
+  }
+
+  .package.featured-package .price-current{
+    font-size:37px;
   }
 
 }
@@ -1247,7 +1346,6 @@ alt="Boreal digital invitation"
 
 <!-- =========================================================
      EVENT CATEGORIES
-     FEATURED WEDDING REMOVED FROM HOME
 ========================================================= -->
 
 <section
@@ -1292,7 +1390,6 @@ around the moment.
 
 <!-- =====================================================
      WEDDINGS
-     THIS CARD GOES TO THE WEDDING COLLECTION
 ===================================================== -->
 
 <a
@@ -1656,7 +1753,7 @@ data-i18n="marketNote"
 
 
 <!-- =====================================================
-     ESSENTIAL / BOREAL
+     ESSENTIAL
 ===================================================== -->
 
 <article class="package">
@@ -1733,19 +1830,10 @@ Print at the printer of your choice.
 
 <!-- =====================================================
      SIGNATURE
+     NO "MOST POPULAR" BADGE
 ===================================================== -->
 
-<article
-class="package featured-package"
->
-
-<div
-class="ribbon"
-data-i18n="mostPopular"
->
-Most Popular
-</div>
-
+<article class="package">
 
 <div class="icon">
 💌
@@ -1842,10 +1930,21 @@ Details to keep in mind
 
 
 <!-- =====================================================
-     PREMIUM
+     PREMIUM CUSTOM
+     HERO PACKAGE
 ===================================================== -->
 
-<article class="package">
+<article
+class="package featured-package"
+>
+
+<div
+class="ribbon"
+data-i18n="mostPersonalized"
+>
+Most Personalized
+</div>
+
 
 <div class="icon">
 👑
@@ -1882,6 +1981,14 @@ class="package-tag"
 id="pkg3Tag"
 >
 Custom Interactive Experience
+</div>
+
+
+<div
+class="premium-message"
+data-i18n="premiumMessage"
+>
+✨ Designed around <strong>your vision</strong>, not a template.
 </div>
 
 
@@ -2668,7 +2775,9 @@ packagesCopy:"Three clear options, from a beautiful printable invitation to a fu
 
 marketNote:"🌎 Prices update automatically for your selected market.",
 
-mostPopular:"Most Popular",
+mostPersonalized:"Most Personalized",
+
+premiumMessage:"✨ Designed around <strong>your vision</strong>, not a template.",
 
 
 pkg1item1:"High-resolution PNG",
@@ -2853,7 +2962,9 @@ packagesCopy:"Tres opciones claras, desde una hermosa invitación imprimible has
 
 marketNote:"🌎 Los precios se actualizan automáticamente según el mercado seleccionado.",
 
-mostPopular:"Más Popular",
+mostPersonalized:"Más Personalizado",
+
+premiumMessage:"✨ Diseñado alrededor de <strong>tu visión</strong>, no de una plantilla.",
 
 
 pkg1item1:"PNG en alta resolución",
