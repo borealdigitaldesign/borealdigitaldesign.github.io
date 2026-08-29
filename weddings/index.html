@@ -599,11 +599,9 @@ h2{
 
 /* =========================================================
    COLLECTION LABELS
-   PREMIUM / SIGNATURE SAMPLE
 ========================================================= */
 
 .wedding-card-label{
-
   display:inline-flex;
 
   align-items:center;
@@ -647,7 +645,6 @@ h2{
 }
 
 .wedding-card-label::after{
-
   content:"";
 
   position:absolute;
@@ -671,7 +668,6 @@ h2{
 
 .wedding-card:hover
 .wedding-card-label::after{
-
   transform:
     translateX(120%);
 }
@@ -711,10 +707,152 @@ h2{
   text-transform:uppercase;
 
   letter-spacing:.08em;
+
+  border:0;
+
+  background:transparent;
+
+  padding:0;
+
+  cursor:pointer;
 }
 
 .card-link:hover{
   color:#4d39b0;
+}
+
+
+/* =========================================================
+   VIDEO MODAL
+========================================================= */
+
+.video-modal{
+  position:fixed;
+
+  inset:0;
+
+  z-index:1000;
+
+  display:none;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:25px;
+}
+
+.video-modal.open{
+  display:flex;
+}
+
+.video-modal-backdrop{
+  position:absolute;
+
+  inset:0;
+
+  background:
+    rgba(9,20,43,.82);
+
+  backdrop-filter:
+    blur(8px);
+}
+
+.video-modal-content{
+  position:relative;
+
+  z-index:2;
+
+  width:
+    min(
+      520px,
+      100%
+    );
+
+  max-height:
+    90vh;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  animation:
+    modalIn .25s ease;
+}
+
+.video-modal video{
+  display:block;
+
+  width:100%;
+
+  max-height:85vh;
+
+  border-radius:20px;
+
+  background:#000;
+
+  box-shadow:
+    0 25px 80px
+    rgba(0,0,0,.40);
+}
+
+.video-modal-close{
+  position:absolute;
+
+  top:-14px;
+
+  right:-14px;
+
+  z-index:3;
+
+  width:42px;
+
+  height:42px;
+
+  border:0;
+
+  border-radius:50%;
+
+  background:white;
+
+  color:var(--navy);
+
+  font-size:28px;
+
+  line-height:1;
+
+  cursor:pointer;
+
+  box-shadow:
+    0 8px 25px
+    rgba(0,0,0,.18);
+
+  transition:
+    transform .2s ease;
+}
+
+.video-modal-close:hover{
+  transform:scale(1.08);
+}
+
+@keyframes modalIn{
+
+  from{
+    opacity:0;
+    transform:
+      scale(.95)
+      translateY(10px);
+  }
+
+  to{
+    opacity:1;
+    transform:
+      scale(1)
+      translateY(0);
+  }
+
 }
 
 
@@ -1195,6 +1333,22 @@ footer{
     font-size:11px;
   }
 
+  .video-modal{
+    padding:18px;
+  }
+
+  .video-modal-close{
+    top:-10px;
+
+    right:-6px;
+
+    width:38px;
+
+    height:38px;
+
+    font-size:25px;
+  }
+
   .experience-grid{
     grid-template-columns:1fr;
   }
@@ -1488,10 +1642,10 @@ View Packages →
 
 <div class="hero-visual">
 
-  <img
-    src="../assets/hero/wedding-invitations-collage.png"
-    alt="Collection of digital wedding invitations"
-  >
+<img
+src="../assets/hero/wedding-invitations-collage.png"
+alt="Collection of digital wedding invitations"
+>
 
 </div>
 
@@ -1551,7 +1705,6 @@ that feels right for your celebration.
 
 <article class="wedding-card">
 
-
 <div class="wedding-card-image">
 
 <img
@@ -1597,31 +1750,45 @@ View invitation →
 </article>
 
 
+
 <!-- =====================================================
      KYLIE & JACKSON — SIGNATURE CUSTOM
 ===================================================== -->
+
 <article class="wedding-card">
+
 <div class="wedding-card-image">
+
 <img
 src="../assets/featured/kylie-jackson-featured-phone.png"
 alt="Kylie & Jackson digital wedding invitation"
 >
+
 </div>
+
+
 <div class="wedding-card-body">
+
 <div
 class="wedding-card-label"
 data-i18n="kylieLabel"
 >
 ✦ Signature Custom Sample
 </div>
+
+
 <h3>
 Kylie &amp; Jackson
 </h3>
+
+
 <p
 data-i18n="kylieCopy"
 >
 Modern, stylish and beautifully personal.
 </p>
+
+
 <a
 class="card-link"
 href="https://borealdigitaldesign.github.io/Signature/kylie-jackson"
@@ -1629,33 +1796,51 @@ data-i18n="viewInvitation"
 >
 View invitation →
 </a>
+
 </div>
+
 </article>
+
+
+
 <!-- =====================================================
-      JESSICA & MICHAEL — SIGNATURE CUSTOM
+     JESSICA & MICHAEL — SIGNATURE CUSTOM
 ===================================================== -->
+
 <article class="wedding-card">
+
 <div class="wedding-card-image">
+
 <img
 src="../assets/featured/jessica-michael-featured-phone.png"
 alt="Jessica & Michael digital wedding invitation"
 >
+
 </div>
+
+
 <div class="wedding-card-body">
+
 <div
 class="wedding-card-label"
 data-i18n="jessicaLabel"
 >
 ✦ Signature Custom Sample
 </div>
+
+
 <h3>
 Jessica &amp; Michael
 </h3>
+
+
 <p
 data-i18n="jessicaCopy"
 >
 Classic, emotional and full of magic.
 </p>
+
+
 <a
 class="card-link"
 href="https://borealdigitaldesign.github.io/Signature/jessica-michael"
@@ -1663,15 +1848,73 @@ data-i18n="viewInvitation"
 >
 View invitation →
 </a>
+
 </div>
+
 </article>
+
+
+
+<!-- =====================================================
+     JAIME & ANNA — ESSENTIAL SAMPLE
+===================================================== -->
+
+<article class="wedding-card">
+
+<div class="wedding-card-image">
+
+<img
+src="../assets/featured/esencial-wedding.png"
+alt="Jaime & Anna Essential wedding invitation"
+>
+
+</div>
+
+
+<div class="wedding-card-body">
+
+<div
+class="wedding-card-label"
+data-i18n="essentialLabel"
+>
+✦ Essential Sample
+</div>
+
+
+<h3
+data-i18n="essentialTitle"
+>
+Jaime &amp; Anna
+</h3>
+
+
+<p
+data-i18n="essentialCopy"
+>
+Simple, romantic and beautifully memorable.
+</p>
+
+
+<button
+class="card-link video-trigger"
+type="button"
+data-video="../assets/featured/esencial-wedding.mp4"
+data-i18n="watchInvitation"
+>
+Watch invitation →
+</button>
+
+</div>
+
+</article>
+
+
 
 <!-- =====================================================
      COMING SOON — MODERN
 ===================================================== -->
 
 <article class="wedding-card">
-
 
 <div class="coming-soon">
 
@@ -1893,6 +2136,48 @@ Explore Packages →
 
 
 <!-- =========================================================
+     VIDEO MODAL
+========================================================= -->
+
+<div
+class="video-modal"
+id="videoModal"
+aria-hidden="true"
+>
+
+<div
+class="video-modal-backdrop"
+id="videoModalBackdrop"
+></div>
+
+
+<div class="video-modal-content">
+
+
+<button
+class="video-modal-close"
+id="videoModalClose"
+aria-label="Close video"
+>
+×
+</button>
+
+
+<video
+id="invitationVideo"
+controls
+playsinline
+>
+</video>
+
+
+</div>
+
+</div>
+
+
+
+<!-- =========================================================
      FOOTER
 ========================================================= -->
 
@@ -2031,6 +2316,20 @@ kylieLabel:"✦ Signature Custom Sample",
 kylieCopy:"Modern, stylish and beautifully personal.",
 
 
+jessicaLabel:"✦ Signature Custom Sample",
+
+jessicaCopy:"Classic, emotional and full of magic.",
+
+
+essentialLabel:"✦ Essential Sample",
+
+essentialTitle:"Jaime & Anna",
+
+essentialCopy:"Simple, romantic and beautifully memorable.",
+
+watchInvitation:"Watch invitation →",
+
+
 viewInvitation:"View invitation →",
 
 
@@ -2131,6 +2430,20 @@ emilyCopy:"Romántica, elegante y atemporal.",
 kylieLabel:"✦ Signature Custom Sample",
 
 kylieCopy:"Moderna, elegante y completamente personal.",
+
+
+jessicaLabel:"✦ Signature Custom Sample",
+
+jessicaCopy:"Clásica, emotiva y llena de magia.",
+
+
+essentialLabel:"✦ Essential Sample",
+
+essentialTitle:"Jaime & Anna",
+
+essentialCopy:"Sencilla, romántica y bellamente memorable.",
+
+watchInvitation:"Ver invitación →",
 
 
 viewInvitation:"Ver invitación →",
@@ -2368,6 +2681,119 @@ document
 );
 
 });
+
+
+/* =========================================================
+   VIDEO MODAL
+========================================================= */
+
+const videoModal =
+document.getElementById("videoModal");
+
+const invitationVideo =
+document.getElementById("invitationVideo");
+
+const videoModalClose =
+document.getElementById("videoModalClose");
+
+const videoModalBackdrop =
+document.getElementById("videoModalBackdrop");
+
+
+function closeVideoModal(){
+
+invitationVideo.pause();
+
+invitationVideo.currentTime = 0;
+
+invitationVideo.removeAttribute("src");
+
+invitationVideo.load();
+
+
+videoModal.classList.remove(
+"open"
+);
+
+videoModal.setAttribute(
+"aria-hidden",
+"true"
+);
+
+
+document.body.style.overflow =
+"";
+
+}
+
+
+document
+.querySelectorAll(".video-trigger")
+.forEach(button=>{
+
+button.addEventListener(
+"click",
+()=>{
+
+const videoSource =
+button.dataset.video;
+
+
+invitationVideo.src =
+videoSource;
+
+
+videoModal.classList.add(
+"open"
+);
+
+videoModal.setAttribute(
+"aria-hidden",
+"false"
+);
+
+
+document.body.style.overflow =
+"hidden";
+
+
+invitationVideo.play()
+.catch(()=>{});
+
+}
+
+);
+
+});
+
+
+videoModalClose.addEventListener(
+"click",
+closeVideoModal
+);
+
+
+videoModalBackdrop.addEventListener(
+"click",
+closeVideoModal
+);
+
+
+document.addEventListener(
+"keydown",
+event=>{
+
+if(
+event.key === "Escape" &&
+videoModal.classList.contains("open")
+){
+
+closeVideoModal();
+
+}
+
+}
+);
 
 
 /* =========================================================
